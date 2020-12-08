@@ -341,9 +341,9 @@
 											"font": "Arial;13;1",
 											"left": 909,
 											"top": 397,
-											"width": 145.208984375,
+											"width": 151.7216796875,
 											"height": 13,
-											"text": "Acteurs public & privés"
+											"text": "Secteurs public & privés"
 										},
 										{
 											"_type": "LabelView",
@@ -376,7 +376,7 @@
 									"font": "Arial;13;0",
 									"left": 904,
 									"top": 390,
-									"width": 155.208984375,
+									"width": 161.7216796875,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF2M8Yv9sBN/aY="
@@ -460,7 +460,7 @@
 							"containerChangeable": true,
 							"left": 904,
 							"top": 336,
-							"width": 155.208984375,
+							"width": 161.7216796875,
 							"height": 80,
 							"nameCompartment": {
 								"$ref": "AAAAAAF2M8Yv9sBMDYE="
@@ -1149,8 +1149,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 704,
-									"top": 466,
+									"left": 705,
+									"top": 467,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -1170,8 +1170,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 708,
-									"top": 480,
+									"left": 709,
+									"top": 481,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -1191,8 +1191,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 695,
-									"top": 437,
+									"left": 696,
+									"top": 438,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -1213,7 +1213,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 882,
-									"top": 413,
+									"top": 414,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 30,
@@ -1234,7 +1234,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 883,
-									"top": 427,
+									"top": 428,
 									"height": 13,
 									"alpha": 0.7853981633974483,
 									"distance": 40,
@@ -1255,7 +1255,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 878,
-									"top": 386,
+									"top": 387,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 25,
@@ -1275,7 +1275,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 527,
+									"left": 528,
 									"top": 519,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -1295,7 +1295,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 533,
+									"left": 534,
 									"top": 532,
 									"height": 13,
 									"alpha": -0.7853981633974483,
@@ -1315,7 +1315,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 515,
+									"left": 516,
 									"top": 494,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -1361,7 +1361,7 @@
 								"$ref": "AAAAAAF2M8Yv9sBLF94="
 							},
 							"lineStyle": 1,
-							"points": "903:398;498:519",
+							"points": "903:399;499:519",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF2M9kcOMF1tnM="
@@ -2823,7 +2823,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 733,
-									"top": 390,
+									"top": 391,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -2843,8 +2843,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 734,
-									"top": 405,
+									"left": 733,
+									"top": 406,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -2865,7 +2865,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 732,
-									"top": 361,
+									"top": 362,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -2886,7 +2886,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 877,
-									"top": 386,
+									"top": 387,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 30,
@@ -2907,7 +2907,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 875,
-									"top": 400,
+									"top": 401,
 									"height": 13,
 									"alpha": 0.7853981633974483,
 									"distance": 40,
@@ -2928,7 +2928,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 880,
-									"top": 359,
+									"top": 360,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 25,
@@ -3034,7 +3034,7 @@
 								"$ref": "AAAAAAF2M8Yv9sBLF94="
 							},
 							"lineStyle": 1,
-							"points": "903:377;564:388",
+							"points": "903:378;564:388",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF2M98Q1s2diXY="
@@ -3829,7 +3829,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 683,
-									"top": 349,
+									"top": 348,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -3850,7 +3850,7 @@
 									"visible": null,
 									"font": "Arial;13;0",
 									"left": 681,
-									"top": 364,
+									"top": 363,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -3871,7 +3871,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 686,
-									"top": 320,
+									"top": 319,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -3955,7 +3955,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 492,
-									"top": 327,
+									"top": 326,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 30,
@@ -3975,7 +3975,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 492,
-									"top": 341,
+									"top": 340,
 									"height": 13,
 									"alpha": -0.7853981633974483,
 									"distance": 40,
@@ -3995,7 +3995,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 490,
-									"top": 300,
+									"top": 299,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 25,
@@ -4040,7 +4040,7 @@
 								"$ref": "AAAAAAF2M8Yv9sBLF94="
 							},
 							"lineStyle": 1,
-							"points": "903:366;468:316",
+							"points": "903:366;468:315",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF2M+FxStpl444="
@@ -5265,7 +5265,7 @@
 					"_parent": {
 						"$ref": "AAAAAAF2M8T2pr/9nbw="
 					},
-					"name": "Acteurs public & privés",
+					"name": "Secteurs public & privés",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -5925,9 +5925,9 @@
 											"font": "Arial;13;1",
 											"left": 813,
 											"top": 189,
-											"width": 145.208984375,
+											"width": 151.7216796875,
 											"height": 13,
-											"text": "Acteurs public & privés"
+											"text": "Secteurs public & privés"
 										},
 										{
 											"_type": "LabelView",
@@ -5960,7 +5960,7 @@
 									"font": "Arial;13;0",
 									"left": 808,
 									"top": 182,
-									"width": 155.208984375,
+									"width": 161.7216796875,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF2M/nIdzL3T3Y="
@@ -6044,7 +6044,7 @@
 							"containerChangeable": true,
 							"left": 808,
 							"top": 128,
-							"width": 155.208984375,
+							"width": 161.7216796875,
 							"height": 80,
 							"nameCompartment": {
 								"$ref": "AAAAAAF2M/nIdjL21zs="
@@ -7615,7 +7615,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 786,
-									"top": 204,
+									"top": 205,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 30,
@@ -7636,7 +7636,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 787,
-									"top": 217,
+									"top": 218,
 									"height": 13,
 									"alpha": 0.7853981633974483,
 									"distance": 40,
@@ -7657,7 +7657,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 782,
-									"top": 176,
+									"top": 177,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 25,
@@ -7677,7 +7677,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 548,
+									"left": 549,
 									"top": 272,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -7697,7 +7697,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 553,
+									"left": 554,
 									"top": 284,
 									"height": 13,
 									"alpha": -0.7853981633974483,
@@ -7717,7 +7717,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 536,
+									"left": 537,
 									"top": 247,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -7763,7 +7763,7 @@
 								"$ref": "AAAAAAF2M/nIdjL1FmY="
 							},
 							"lineStyle": 1,
-							"points": "807:189;519:271",
+							"points": "807:190;520:271",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF2M/4TVzwsJYU="
@@ -9511,7 +9511,7 @@
 					"_parent": {
 						"$ref": "AAAAAAF2M/iZWjJJfIg="
 					},
-					"name": "Acteurs public & privés",
+					"name": "Secteurs public & privés",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -9996,7 +9996,7 @@
 									"font": "Arial;13;0",
 									"left": 338.5,
 									"top": 100.5,
-									"width": 165.56201171875,
+									"width": 165,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF2Odf0U6T7U1o="
@@ -10192,7 +10192,7 @@
 									"font": "Arial;13;0",
 									"left": 342,
 									"top": 188.5,
-									"width": 143.376953125,
+									"width": 142,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF2OdkTL6UrsBk="
@@ -10386,7 +10386,7 @@
 									"font": "Arial;13;0",
 									"left": 334.5,
 									"top": 284.5,
-									"width": 145.5732421875,
+									"width": 144,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF2OdlLD6VZvK0="
@@ -11780,9 +11780,9 @@
 											"font": "Arial;13;1",
 											"left": 613,
 											"top": 253,
-											"width": 156.78076171875,
+											"width": 163.29345703125,
 											"height": 13,
-											"text": "Acteurs Publics &  privés"
+											"text": "Secteurs Publics &  privés"
 										},
 										{
 											"_type": "LabelView",
@@ -11815,7 +11815,7 @@
 									"font": "Arial;13;0",
 									"left": 608,
 									"top": 246,
-									"width": 166.78076171875,
+									"width": 173.29345703125,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF2OdsyLqlrN2s="
@@ -11899,7 +11899,7 @@
 							"containerChangeable": true,
 							"left": 608,
 							"top": 192,
-							"width": 166.78076171875,
+							"width": 173.29345703125,
 							"height": 80,
 							"nameCompartment": {
 								"$ref": "AAAAAAF2OdsyLalqtgg="
@@ -12851,7 +12851,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 577,
-									"top": 201,
+									"top": 200,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 30,
@@ -12871,8 +12871,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 570,
-									"top": 213,
+									"left": 571,
+									"top": 212,
 									"height": 13,
 									"alpha": 0.7853981633974483,
 									"distance": 40,
@@ -12893,7 +12893,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 590,
-									"top": 177,
+									"top": 176,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 25,
@@ -12934,7 +12934,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 420,
-									"top": 161,
+									"top": 160,
 									"height": 13,
 									"alpha": -0.7853981633974483,
 									"distance": 40,
@@ -12999,7 +12999,7 @@
 								"$ref": "AAAAAAF2OdsyLalpRso="
 							},
 							"lineStyle": 1,
-							"points": "607:202;403:131",
+							"points": "607:201;403:131",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF2Od3n56q6ioY="
@@ -13391,7 +13391,7 @@
 					"_parent": {
 						"$ref": "AAAAAAF2OdoQAaaOCTo="
 					},
-					"name": "Acteurs Publics &  privés",
+					"name": "Secteurs Publics &  privés",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -13787,9 +13787,9 @@
 											"font": "Arial;13;1",
 											"left": 677,
 											"top": 237,
-											"width": 153.89892578125,
+											"width": 160.41162109375,
 											"height": 13,
-											"text": "Acteurs Publics & Privés"
+											"text": "Secteurs Publics & Privés"
 										},
 										{
 											"_type": "LabelView",
@@ -13822,7 +13822,7 @@
 									"font": "Arial;13;0",
 									"left": 672,
 									"top": 230,
-									"width": 163.89892578125,
+									"width": 170.41162109375,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF2OeU2GrWRMfQ="
@@ -13906,7 +13906,7 @@
 							"containerChangeable": true,
 							"left": 672,
 							"top": 176,
-							"width": 163.89892578125,
+							"width": 170.41162109375,
 							"height": 80,
 							"nameCompartment": {
 								"$ref": "AAAAAAF2OeU2GrWQaHU="
@@ -14338,7 +14338,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 568,
-									"top": 174,
+									"top": 173,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -14359,7 +14359,7 @@
 									"visible": null,
 									"font": "Arial;13;0",
 									"left": 564,
-									"top": 188,
+									"top": 187,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -14380,7 +14380,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 575,
-									"top": 145,
+									"top": 144,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -14400,8 +14400,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 641,
-									"top": 194,
+									"left": 642,
+									"top": 193,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 30,
@@ -14422,7 +14422,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 636,
-									"top": 206,
+									"top": 205,
 									"height": 13,
 									"alpha": 0.7853981633974483,
 									"distance": 40,
@@ -14443,7 +14443,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 653,
-									"top": 169,
+									"top": 168,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 25,
@@ -14463,7 +14463,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 494,
+									"left": 495,
 									"top": 154,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -14483,7 +14483,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 492,
+									"left": 493,
 									"top": 167,
 									"height": 13,
 									"alpha": -0.7853981633974483,
@@ -14503,7 +14503,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 497,
+									"left": 498,
 									"top": 126,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -14549,7 +14549,7 @@
 								"$ref": "AAAAAAF2OeU2GrWP2IU="
 							},
 							"lineStyle": 1,
-							"points": "671:193;473:139",
+							"points": "671:192;474:139",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF2OeY/sLZualw="
@@ -14926,7 +14926,7 @@
 					"_parent": {
 						"$ref": "AAAAAAF2OeQ4CbSuXrY="
 					},
-					"name": "Acteurs Publics & Privés",
+					"name": "Secteurs Publics & Privés",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -15292,9 +15292,9 @@
 											"font": "Arial;13;1",
 											"left": 677,
 											"top": 317,
-											"width": 153.89892578125,
+											"width": 160.41162109375,
 											"height": 13,
-											"text": "Acteurs Publics & Privés"
+											"text": "Secteurs Publics & Privés"
 										},
 										{
 											"_type": "LabelView",
@@ -15327,7 +15327,7 @@
 									"font": "Arial;13;0",
 									"left": 672,
 									"top": 310,
-									"width": 163.89892578125,
+									"width": 170.41162109375,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF2Oe0jY8Kx46s="
@@ -15411,7 +15411,7 @@
 							"containerChangeable": true,
 							"left": 672,
 							"top": 256,
-							"width": 163.89892578125,
+							"width": 170.41162109375,
 							"height": 80,
 							"nameCompartment": {
 								"$ref": "AAAAAAF2Oe0jY8KwBE8="
@@ -16046,7 +16046,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 472,
+									"left": 473,
 									"top": 233,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -16066,7 +16066,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 471,
+									"left": 472,
 									"top": 247,
 									"height": 13,
 									"alpha": -0.7853981633974483,
@@ -16086,7 +16086,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 475,
+									"left": 476,
 									"top": 206,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -16132,7 +16132,7 @@
 								"$ref": "AAAAAAF2Oe0jY8Kv+PQ="
 							},
 							"lineStyle": 1,
-							"points": "671:274;451:219",
+							"points": "671:274;452:219",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF2Oe7a8sNRqZ4="
@@ -16232,7 +16232,7 @@
 					"_parent": {
 						"$ref": "AAAAAAF2OexaFcFlbzQ="
 					},
-					"name": "Acteurs Publics & Privés",
+					"name": "Secteurs Publics & Privés",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -17097,7 +17097,7 @@
 									"font": "Arial;13;0",
 									"left": 281,
 									"top": 300.5,
-									"width": 197.10986328125,
+									"width": 196,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF2OfXVjsg2htI="
@@ -17562,7 +17562,7 @@
 									"font": "Arial;13;0",
 									"left": 283.5,
 									"top": 196.5,
-									"width": 248.38623046875,
+									"width": 248,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF2OfZEZsknKPw="
@@ -28431,9 +28431,9 @@
 												"$ref": "AAAAAAF2P7n5QC6prlk="
 											},
 											"font": "Arial;13;0",
-											"left": 29.72998046875,
+											"left": 27.55908203125,
 											"top": 10,
-											"width": 212.75146484375,
+											"width": 189.0556640625,
 											"height": 13,
 											"text": "Service Maintenance Sequence diag"
 										},
@@ -28446,7 +28446,7 @@
 											"font": "Arial;13;1",
 											"left": 10,
 											"top": 10,
-											"width": 14.72998046875,
+											"width": 12.55908203125,
 											"height": 13,
 											"text": "sd"
 										}
@@ -28711,7 +28711,7 @@
 											"font": "Arial;13;0",
 											"left": 43,
 											"top": 109,
-											"width": 183.85693359375,
+											"width": 168.501953125,
 											"height": 13,
 											"text": "Sequence diag: Authentification"
 										},
@@ -29091,9 +29091,9 @@
 												"$ref": "AAAAAAF2P7n5QS7MbhU="
 											},
 											"font": "Arial;13;0",
-											"left": 72.72998046875,
+											"left": 71.99365234375,
 											"top": 525,
-											"width": 117.33349609375,
+											"width": 104.59375,
 											"height": 13,
 											"text": "anomalies corrigées"
 										},
@@ -29106,7 +29106,7 @@
 											"font": "Arial;13;1",
 											"left": 53,
 											"top": 525,
-											"width": 14.72998046875,
+											"width": 13.99365234375,
 											"height": 13,
 											"text": "alt"
 										},
@@ -29846,9 +29846,9 @@
 												"$ref": "AAAAAAF2P7o+LTDcnpw="
 											},
 											"font": "Arial;13;0",
-											"left": 32.72998046875,
+											"left": 30.55908203125,
 											"top": 13,
-											"width": 180.2451171875,
+											"width": 164.89013671875,
 											"height": 13,
 											"text": "Authentification Sequence diag"
 										},
@@ -29861,7 +29861,7 @@
 											"font": "Arial;13;1",
 											"left": 13,
 											"top": 13,
-											"width": 14.72998046875,
+											"width": 12.55908203125,
 											"height": 13,
 											"text": "sd"
 										}
@@ -30356,9 +30356,9 @@
 												"$ref": "AAAAAAF2P7o+LzD33yQ="
 											},
 											"font": "Arial;13;0",
-											"left": 107.578125,
+											"left": 106.11181640625,
 											"top": 325,
-											"width": 261.13330078125,
+											"width": 229.515625,
 											"height": 13,
 											"text": "username et ou mot de passe sont incorrects"
 										},
@@ -30371,7 +30371,7 @@
 											"font": "Arial;13;1",
 											"left": 77,
 											"top": 325,
-											"width": 25.578125,
+											"width": 24.11181640625,
 											"height": 13,
 											"text": "loop"
 										},
@@ -30903,9 +30903,9 @@
 												"$ref": "AAAAAAF2P7o+MDERYFo="
 											},
 											"font": "Arial;13;0",
-											"left": 56.72998046875,
+											"left": 55.99365234375,
 											"top": 109,
-											"width": 92.79345703125,
+											"width": 81.11376953125,
 											"height": 13,
 											"text": "deja connecté ?"
 										},
@@ -30918,7 +30918,7 @@
 											"font": "Arial;13;1",
 											"left": 37,
 											"top": 109,
-											"width": 14.72998046875,
+											"width": 13.99365234375,
 											"height": 13,
 											"text": "alt"
 										},
@@ -30951,7 +30951,7 @@
 															"font": "Arial;13;0",
 															"left": 52,
 															"top": 142,
-															"width": 28.91357421875,
+															"width": 28.158203125,
 															"height": 13,
 															"text": "[non]"
 														}
@@ -31211,9 +31211,9 @@
 												"$ref": "AAAAAAF2P7pUqjM/UTU="
 											},
 											"font": "Arial;13;0",
-											"left": 40.72998046875,
+											"left": 38.55908203125,
 											"top": 13,
-											"width": 282.099609375,
+											"width": 252.62109375,
 											"height": 13,
 											"text": "Service Evénements & Festivaux Sequence diag"
 										},
@@ -31226,7 +31226,7 @@
 											"font": "Arial;13;1",
 											"left": 21,
 											"top": 13,
-											"width": 14.72998046875,
+											"width": 12.55908203125,
 											"height": 13,
 											"text": "sd"
 										}
@@ -32393,9 +32393,9 @@
 												"$ref": "AAAAAAF2P7pUqzN69xQ="
 											},
 											"font": "Arial;13;0",
-											"left": 96.72998046875,
+											"left": 95.99365234375,
 											"top": 549,
-											"width": 98.5380859375,
+											"width": 88.724609375,
 											"height": 13,
 											"text": "visiteur intéressé"
 										},
@@ -32408,7 +32408,7 @@
 											"font": "Arial;13;1",
 											"left": 77,
 											"top": 549,
-											"width": 14.72998046875,
+											"width": 13.99365234375,
 											"height": 13,
 											"text": "alt"
 										},
@@ -32604,7 +32604,7 @@
 											"font": "Arial;13;0",
 											"left": 67,
 											"top": 117,
-											"width": 183.85693359375,
+											"width": 168.501953125,
 											"height": 13,
 											"text": "Sequence diag: Authentification"
 										},
@@ -32873,9 +32873,9 @@
 												"$ref": "AAAAAAF2P7pUrjOSXsc="
 											},
 											"font": "Arial;13;0",
-											"left": 75.578125,
+											"left": 74.11181640625,
 											"top": 397,
-											"width": 126.7216796875,
+											"width": 114.74365234375,
 											"height": 13,
 											"text": "pour tous les visiteurs"
 										},
@@ -32888,7 +32888,7 @@
 											"font": "Arial;13;1",
 											"left": 45,
 											"top": 397,
-											"width": 25.578125,
+											"width": 24.11181640625,
 											"height": 13,
 											"text": "loop"
 										},
@@ -33257,9 +33257,9 @@
 												"$ref": "AAAAAAF2P7prxjY/fKs="
 											},
 											"font": "Arial;13;0",
-											"left": 29.72998046875,
+											"left": 27.55908203125,
 											"top": 10,
-											"width": 230.08056640625,
+											"width": 208.2255859375,
 											"height": 13,
 											"text": "Service Album Souvenir Sequence diag"
 										},
@@ -33272,7 +33272,7 @@
 											"font": "Arial;13;1",
 											"left": 10,
 											"top": 10,
-											"width": 14.72998046875,
+											"width": 12.55908203125,
 											"height": 13,
 											"text": "sd"
 										}
@@ -33534,7 +33534,7 @@
 											"font": "Arial;13;0",
 											"left": 43,
 											"top": 93,
-											"width": 183.85693359375,
+											"width": 168.501953125,
 											"height": 13,
 											"text": "Sequence diag: Authentification"
 										},
@@ -33580,9 +33580,9 @@
 												"$ref": "AAAAAAF2P7pryDZTPvY="
 											},
 											"font": "Arial;13;0",
-											"left": 56.72998046875,
+											"left": 55.99365234375,
 											"top": 181,
-											"width": 66.03173828125,
+											"width": 62.37548828125,
 											"height": 13,
 											"text": "fin de visite"
 										},
@@ -33595,7 +33595,7 @@
 											"font": "Arial;13;1",
 											"left": 37,
 											"top": 181,
-											"width": 14.72998046875,
+											"width": 13.99365234375,
 											"height": 13,
 											"text": "alt"
 										},
@@ -34126,9 +34126,9 @@
 												"$ref": "AAAAAAF2P7pryjZtqGc="
 											},
 											"font": "Arial;13;0",
-											"left": 83.578125,
+											"left": 82.11181640625,
 											"top": 357,
-											"width": 276.31689453125,
+											"width": 253.6875,
 											"height": 13,
 											"text": "tant que le visiteur veut encore modifier la video"
 										},
@@ -34141,7 +34141,7 @@
 											"font": "Arial;13;1",
 											"left": 53,
 											"top": 357,
-											"width": 25.578125,
+											"width": 24.11181640625,
 											"height": 13,
 											"text": "loop"
 										},
@@ -34449,9 +34449,9 @@
 												"$ref": "AAAAAAF2P7pryzZ9OXo="
 											},
 											"font": "Arial;13;0",
-											"left": 88.72998046875,
+											"left": 87.99365234375,
 											"top": 469,
-											"width": 256.048828125,
+											"width": 235.685546875,
 											"height": 13,
 											"text": "si le visiteur veut visionner ses modifications"
 										},
@@ -34464,7 +34464,7 @@
 											"font": "Arial;13;1",
 											"left": 69,
 											"top": 469,
-											"width": 14.72998046875,
+											"width": 13.99365234375,
 											"height": 13,
 											"text": "alt"
 										},
@@ -34773,9 +34773,9 @@
 												"$ref": "AAAAAAF2P7przDaNOOc="
 											},
 											"font": "Arial;13;0",
-											"left": 72.72998046875,
+											"left": 71.99365234375,
 											"top": 589,
-											"width": 217.7724609375,
+											"width": 197.13623046875,
 											"height": 13,
 											"text": "si le visiteur veut telecharger sa video"
 										},
@@ -34788,7 +34788,7 @@
 											"font": "Arial;13;1",
 											"left": 53,
 											"top": 589,
-											"width": 14.72998046875,
+											"width": 13.99365234375,
 											"height": 13,
 											"text": "alt"
 										},
@@ -34874,9 +34874,9 @@
 												"$ref": "AAAAAAF2P7przDaTGU4="
 											},
 											"font": "Arial;13;0",
-											"left": 72.72998046875,
+											"left": 71.99365234375,
 											"top": 725,
-											"width": 201.154296875,
+											"width": 182.21923828125,
 											"height": 13,
 											"text": "si le visiteur veut partager sa video"
 										},
@@ -34889,7 +34889,7 @@
 											"font": "Arial;13;1",
 											"left": 53,
 											"top": 725,
-											"width": 14.72998046875,
+											"width": 13.99365234375,
 											"height": 13,
 											"text": "alt"
 										},
@@ -36019,9 +36019,9 @@
 												"$ref": "AAAAAAF2P7qDIDki0VM="
 											},
 											"font": "Arial;13;0",
-											"left": 32.72998046875,
+											"left": 30.55908203125,
 											"top": 34,
-											"width": 201.90966796875,
+											"width": 178.2392578125,
 											"height": 13,
 											"text": "Service Dashboard Sequence diag"
 										},
@@ -36034,7 +36034,7 @@
 											"font": "Arial;13;1",
 											"left": 13,
 											"top": 34,
-											"width": 14.72998046875,
+											"width": 12.55908203125,
 											"height": 13,
 											"text": "sd"
 										}
@@ -36306,9 +36306,9 @@
 												"$ref": "AAAAAAF2P7qDITkzGyU="
 											},
 											"font": "Arial;13;0",
-											"left": 355.578125,
+											"left": 354.11181640625,
 											"top": 117,
-											"width": 244.85791015625,
+											"width": 223.193359375,
 											"height": 13,
 											"text": "tant qu'un visiteur arrive à un nouveau lieu"
 										},
@@ -36321,7 +36321,7 @@
 											"font": "Arial;13;1",
 											"left": 325,
 											"top": 117,
-											"width": 25.578125,
+											"width": 24.11181640625,
 											"height": 13,
 											"text": "loop"
 										},
@@ -36865,9 +36865,9 @@
 												"$ref": "AAAAAAF2P7qDITlOqXw="
 											},
 											"font": "Arial;13;0",
-											"left": 75.578125,
+											"left": 74.11181640625,
 											"top": 437,
-											"width": 197.16796875,
+											"width": 178.4423828125,
 											"height": 13,
 											"text": "tant qu'un visiteur change son lieu"
 										},
@@ -36880,7 +36880,7 @@
 											"font": "Arial;13;1",
 											"left": 45,
 											"top": 437,
-											"width": 25.578125,
+											"width": 24.11181640625,
 											"height": 13,
 											"text": "loop"
 										},
@@ -37076,7 +37076,7 @@
 											"font": "Arial;13;0",
 											"left": 51,
 											"top": 245,
-											"width": 183.85693359375,
+											"width": 168.501953125,
 											"height": 13,
 											"text": "Sequence diag: Authentification"
 										},
@@ -37311,9 +37311,9 @@
 												"$ref": "AAAAAAF2P7qa2zti63Q="
 											},
 											"font": "Arial;13;0",
-											"left": 29.72998046875,
+											"left": 27.55908203125,
 											"top": 10,
-											"width": 173.00244140625,
+											"width": 153.69287109375,
 											"height": 13,
 											"text": "Service Guide Sequence diag"
 										},
@@ -37326,7 +37326,7 @@
 											"font": "Arial;13;1",
 											"left": 10,
 											"top": 10,
-											"width": 14.72998046875,
+											"width": 12.55908203125,
 											"height": 13,
 											"text": "sd"
 										}
@@ -37588,7 +37588,7 @@
 											"font": "Arial;13;0",
 											"left": 43,
 											"top": 93,
-											"width": 183.85693359375,
+											"width": 168.501953125,
 											"height": 13,
 											"text": "Sequence diag: Authentification"
 										},
@@ -37856,9 +37856,9 @@
 												"$ref": "AAAAAAF2P7qa3DuATI8="
 											},
 											"font": "Arial;13;0",
-											"left": 56.72998046875,
+											"left": 55.99365234375,
 											"top": 269,
-											"width": 171.5615234375,
+											"width": 154.41015625,
 											"height": 13,
 											"text": "destination pliene ou fermée?"
 										},
@@ -37871,7 +37871,7 @@
 											"font": "Arial;13;1",
 											"left": 37,
 											"top": 269,
-											"width": 14.72998046875,
+											"width": 13.99365234375,
 											"height": 13,
 											"text": "alt"
 										},
@@ -37904,7 +37904,7 @@
 															"font": "Arial;13;0",
 															"left": 52,
 															"top": 302,
-															"width": 28.91357421875,
+															"width": 28.158203125,
 															"height": 13,
 															"text": "[non]"
 														}
@@ -37937,7 +37937,7 @@
 															"font": "Arial;13;0",
 															"left": 52,
 															"top": 496,
-															"width": 24.57177734375,
+															"width": 25.27001953125,
 															"height": 13,
 															"text": "[oui]"
 														}
@@ -38103,9 +38103,9 @@
 												"$ref": "AAAAAAF2P7qa3TuNvfM="
 											},
 											"font": "Arial;13;0",
-											"left": 79.9599609375,
+											"left": 76.3291015625,
 											"top": 397,
-											"width": 248.8759765625,
+											"width": 226.2529296875,
 											"height": 13,
 											"text": "tant que le visiteur arrive à un nouveau lieu"
 										},
@@ -38118,7 +38118,7 @@
 											"font": "Arial;13;1",
 											"left": 53,
 											"top": 397,
-											"width": 21.9599609375,
+											"width": 18.3291015625,
 											"height": 13,
 											"text": "seq"
 										},
@@ -38538,9 +38538,9 @@
 												"$ref": "AAAAAAF2P7qa3TuiPsw="
 											},
 											"font": "Arial;13;0",
-											"left": 72.72998046875,
+											"left": 71.99365234375,
 											"top": 541,
-											"width": 253.93505859375,
+											"width": 226.9638671875,
 											"height": 13,
 											"text": "le visiteur accepte la destination proposée ?"
 										},
@@ -38553,7 +38553,7 @@
 											"font": "Arial;13;1",
 											"left": 53,
 											"top": 541,
-											"width": 14.72998046875,
+											"width": 13.99365234375,
 											"height": 13,
 											"text": "alt"
 										},
@@ -38586,7 +38586,7 @@
 															"font": "Arial;13;0",
 															"left": 68,
 															"top": 574,
-															"width": 28.91357421875,
+															"width": 28.158203125,
 															"height": 13,
 															"text": "[non]"
 														}
@@ -38619,7 +38619,7 @@
 															"font": "Arial;13;0",
 															"left": 68,
 															"top": 680,
-															"width": 24.57177734375,
+															"width": 25.27001953125,
 															"height": 13,
 															"text": "[oui]"
 														}
@@ -38675,7 +38675,7 @@
 											"font": "Arial;13;0",
 											"left": 91,
 											"top": 605,
-											"width": 176.6142578125,
+											"width": 157.3046875,
 											"height": 13,
 											"text": "Sequence diag: Service Guide"
 										},
@@ -38723,7 +38723,7 @@
 											"font": "Arial;13;0",
 											"left": 91,
 											"top": 701,
-											"width": 222.86962890625,
+											"width": 203.49658203125,
 											"height": 13,
 											"text": "ref destination pliene ou fermée? [non]"
 										},
@@ -42523,7 +42523,7 @@
 											"top": 467,
 											"width": 364.533203125,
 											"height": 13,
-											"text": "-résidence: Adresse = (ad1,10,sidi bouafiif,Al Houceima,Maroc)",
+											"text": "-résidence = (ad1,10,sidi bouafiif,Al Houceima,Maroc)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -42766,7 +42766,7 @@
 											"top": 603,
 											"width": 338.51416015625,
 											"height": 13,
-											"text": "-résidence: Adresse = (ad2,2,kemado,Al Houceima,Maroc)",
+											"text": "-résidence = (ad2,2,kemado,Al Houceima,Maroc)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -43305,7 +43305,7 @@
 											"top": 237,
 											"width": 345.02685546875,
 											"height": 13,
-											"text": "-départ: Adresse = (ad1,10,sidi bouafiif,Al Houceima,Maroc)",
+											"text": "-départ = (ad1,10,sidi bouafiif,Al Houceima,Maroc)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -43322,7 +43322,7 @@
 											"top": 252,
 											"width": 345.02685546875,
 											"height": 13,
-											"text": "-déstination: Adresse = (ad2,2,kemado,Al Houceima,Maroc)",
+											"text": "-déstination = (ad2,2,kemado,Al Houceima,Maroc)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -43826,7 +43826,7 @@
 											"top": 883,
 											"width": 468.228515625,
 											"height": 13,
-											"text": "-localisation: Adresse = déstination: Adresse = (ad2,kemado,Al Houceima,Maroc)",
+											"text": "-localisation = déstination: Adresse = (ad2,kemado,Al Houceima,Maroc)",
 											"horizontalAlignment": 0
 										}
 									],
@@ -44034,7 +44034,7 @@
 											"top": 682,
 											"width": 492.45751953125,
 											"height": 13,
-											"text": "-localisation: Adresse = déstination: Adresse = (ad2,2,kemado,Al Houceima,Maroc)",
+											"text": "-localisation = déstination: Adresse = (ad2,2,kemado,Al Houceima,Maroc)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -46632,9 +46632,6 @@
 							},
 							"name": "résidence",
 							"visibility": "private",
-							"type": {
-								"$ref": "AAAAAAF2Py/SbOkUCt0="
-							},
 							"value": "(ad1,10,sidi bouafiif,Al Houceima,Maroc)"
 						},
 						{
@@ -46808,9 +46805,6 @@
 							},
 							"name": "résidence",
 							"visibility": "private",
-							"type": {
-								"$ref": "AAAAAAF2Py/SbOkUCt0="
-							},
 							"value": "(ad2,2,kemado,Al Houceima,Maroc)"
 						},
 						{
@@ -46977,9 +46971,6 @@
 							},
 							"name": "départ",
 							"visibility": "private",
-							"type": {
-								"$ref": "AAAAAAF2Py/SbOkUCt0="
-							},
 							"value": "(ad1,10,sidi bouafiif,Al Houceima,Maroc)"
 						},
 						{
@@ -46990,9 +46981,6 @@
 							},
 							"name": "déstination",
 							"visibility": "private",
-							"type": {
-								"$ref": "AAAAAAF2Py/SbOkUCt0="
-							},
 							"value": "(ad2,2,kemado,Al Houceima,Maroc)"
 						},
 						{
@@ -47138,9 +47126,6 @@
 							},
 							"name": "localisation",
 							"visibility": "private",
-							"type": {
-								"$ref": "AAAAAAF2Py/SbOkUCt0="
-							},
 							"value": "déstination: Adresse = (ad2,kemado,Al Houceima,Maroc)"
 						}
 					]
@@ -47205,9 +47190,6 @@
 							},
 							"name": "localisation",
 							"visibility": "private",
-							"type": {
-								"$ref": "AAAAAAF2Py/SbOkUCt0="
-							},
 							"value": "déstination: Adresse = (ad2,2,kemado,Al Houceima,Maroc)"
 						},
 						{
