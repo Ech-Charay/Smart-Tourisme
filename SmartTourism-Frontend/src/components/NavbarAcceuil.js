@@ -17,7 +17,7 @@ import {
   UncontrolledTooltip,
 } from "reactstrap";
 
-function IndexNavbar() {
+function NavbarAcceuil() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [collapseOpen, setCollapseOpen] = React.useState(false);
   React.useEffect(() => {
@@ -205,4 +205,4 @@ function IndexNavbar() {
   );
 }
 
-export default IndexNavbar;
+export default NavbarAcceuil;

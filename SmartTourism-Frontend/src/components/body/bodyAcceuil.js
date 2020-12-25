@@ -6,9 +6,8 @@ import {
     Row,
     Col,
 } from "reactstrap";
-import Footer from './Footer';
 
-class Body extends Component {
+class BodyAcceuil extends Component {
 
     constructor(props) {
         super(props);
@@ -42,7 +41,7 @@ class Body extends Component {
                                     <img
                                         alt="..."
                                         className="rounded-circle img-fluid img-raised"
-                                        src={require("assets/img_accueil/map.png")}
+                                        src={require("assets/img/images/map.png")}
                                     ></img>
                                     <h4 className="title">Guide</h4>
                                     <p className="description">
@@ -56,7 +55,7 @@ class Body extends Component {
                                     <img
                                         alt="..."
                                         className="rounded-circle img-fluid img-raised"
-                                        src={require("assets/img_accueil/album.png")}
+                                        src={require("assets/img/images/album.png")}
                                     ></img>
                                     <h4 className="title">Album de Souvenir</h4>
                                     <p className="description">
@@ -70,7 +69,7 @@ class Body extends Component {
                                     <img
                                         alt="..."
                                         className="rounded-circle img-fluid img-raised"
-                                        src={require("assets/img_accueil/dashboard.png")}
+                                        src={require("assets/img/images/dashboard.png")}
                                     ></img>
                                     <h4 className="title">Dashboard</h4>
                                     <p className="description">
@@ -84,7 +83,7 @@ class Body extends Component {
                                     <img
                                         alt="..."
                                         className="rounded-circle img-fluid img-raised"
-                                        src={require("assets/img_accueil/events.png")}
+                                        src={require("assets/img/images/events.png")}
                                     ></img>
                                     <h4 className="title">Events & Festivals</h4>
                                     <p className="description">
@@ -96,10 +95,9 @@ class Body extends Component {
                         </Row>
                     </div>
                 </Container>
-                <Footer/>
             </div>
         )
     }
 }
 
-export default Body;
+export default BodyAcceuil;
