@@ -14,12 +14,18 @@ import NucleoIcons from "views/NucleoIcons.js";
 import LoginPage from "views/examples/LoginPage.js";
 import LandingPage from "views/examples/LandingPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
+import Events_Festivaux from "views/Event_Festivaux";
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Switch>
         <Route path="/acceuil" render={(props) => <Acceuil {...props} />} />
+        <Route
+          path="/events_festivaux"
+          render={(props) => <Events_Festivaux {...props} />}
+        />
+        
         <Route path="/index" render={(props) => <Index {...props} />} />
         <Route
           path="/nucleo-icons"
