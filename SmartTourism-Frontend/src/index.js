@@ -15,6 +15,7 @@ import LoginPage from "views/examples/LoginPage.js";
 import LandingPage from "views/examples/LandingPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
 import Events_Festivaux from "views/Event_Festivaux";
+import listEvents from "views/ListEvents";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -25,7 +26,7 @@ ReactDOM.render(
           path="/events_festivaux"
           render={(props) => <Events_Festivaux {...props} />}
         />
-        
+
         <Route path="/index" render={(props) => <Index {...props} />} />
         <Route
           path="/nucleo-icons"
@@ -43,6 +44,11 @@ ReactDOM.render(
           path="/login-page"
           render={(props) => <LoginPage {...props} />}
         />
+         
+        <Route
+          path="/list"
+          component={listEvents}/>
+                
         <Redirect to="/index" />
         <Redirect from="/" to="/index" />
       </Switch>
