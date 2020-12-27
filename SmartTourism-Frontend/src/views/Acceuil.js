@@ -7,10 +7,10 @@ import React from "react";
 // core components
 import NavbarAcceuil from "components/NavbarAcceuil.js";
 import Header from "components/Header.js";
-import Footer from "components/Footer.js";
 
 // sections for this page
 import BodyAcceuil from "components/body/bodyAcceuil";
+import DarkFooter from "components/Footers/DarkFooter";
 
 function Acceuil() {
   React.useEffect(() => {
@@ -33,7 +33,7 @@ function Acceuil() {
           <BodyAcceuil/>
         </div>
       </div>
-      <Footer />
+      <DarkFooter />
     </>
   );
 }
