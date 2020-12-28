@@ -2,60 +2,45 @@
 import React from "react";
 
 // reactstrap components
-import { Container } from "reactstrap";
+import { Container, Row, Col, Button, UncontrolledTooltip, Nav, NavItem } from "reactstrap";
+import Navbar from "reactstrap/lib/Navbar";
+import { Link } from 'react-router-dom';
 
-function TransparentFooter() {
+function Footer() {
   return (
-    <footer className="footer">
-      <Container>
-        <nav>
-          <ul>
-            <li>
-              <a
-                href="https://www.creative-tim.com?ref=nukr-transparent-footer"
-                target="_blank"
-              >
-                Creative Tim
-              </a>
-            </li>
-            <li>
-              <a
-                href="http://presentation.creative-tim.com?ref=nukr-transparent-footer"
-                target="_blank"
-              >
-                About Us
-              </a>
-            </li>
-            <li>
-              <a
-                href="http://blog.creative-tim.com?ref=nukr-transparent-footer"
-                target="_blank"
-              >
-                Blog
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <div className="copyright" id="copyright">
-          © {new Date().getFullYear()}, Designed by{" "}
-          <a
-            href="https://www.invisionapp.com?ref=nukr-transparent-footer"
-            target="_blank"
-          >
-            Invision
-          </a>
-          . Coded by{" "}
-          <a
-            href="https://www.creative-tim.com?ref=nukr-transparent-footer"
-            target="_blank"
-          >
-            Creative Tim
-          </a>
-          .
+    <footer className="footer" >
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-4 col-sm-6 ml-5 mr-5">
+            <ul>
+
+              <li><Link className="nav-link" to='#'> Reservation Hotel</Link></li>
+              <li><Link className="nav-link" to='#'> Espaces Vertes</Link></li>
+              <li><Link className="nav-link" to='#'> Portfolio</Link></li>
+              <li><Link className="nav-link" to='#'> Team </Link></li>
+              <li><Link className="nav-link" to='#'> Contact </Link></li>
+
+            </ul>
+          </div>
+
+          <div className="col-4 col-sm-4 ml-10">
+            <a className="pr-3 ">
+              <i className="fab fa-twitter"></i>
+            </a>
+            <a className="pr-3">
+              <i className="fab fa-facebook-square"></i>
+            </a>
+            <a className="pr-3">
+              <i className="fab fa-instagram"></i>
+            </a>
+
+
+          </div>
+
         </div>
-      </Container>
+      </div>
     </footer>
   );
 }
 
-export default TransparentFooter;
+export default Footer;

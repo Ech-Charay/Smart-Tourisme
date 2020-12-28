@@ -5,7 +5,7 @@ import React from "react";
 import { Container } from "reactstrap";
 // core components
 
-function IndexHeader() {
+function Header() {
   let pageHeader = React.createRef();
 
   React.useEffect(() => {
@@ -43,4 +43,4 @@ function IndexHeader() {
   );
 }
 
-export default IndexHeader;
+export default Header;

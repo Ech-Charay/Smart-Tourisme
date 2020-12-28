@@ -17,7 +17,7 @@ import {
   UncontrolledTooltip,
 } from "reactstrap";
 
-function IndexNavbar() {
+function NavbarAcceuil() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [collapseOpen, setCollapseOpen] = React.useState(false);
   React.useEffect(() => {
@@ -135,7 +135,7 @@ function IndexNavbar() {
                     <i className="now-ui-icons arrows-1_minimal-right"></i>
                     Dashboard
                   </DropdownItem>
-                  <DropdownItem to="/index" tag={Link}>
+                  <DropdownItem to="/events_festivaux" tag={Link}>
                     <i className="now-ui-icons arrows-1_minimal-right"></i>
                     Evénements & Festivals
                   </DropdownItem>
@@ -205,4 +205,4 @@ function IndexNavbar() {
   );
 }
 
-export default IndexNavbar;
+export default NavbarAcceuil;
