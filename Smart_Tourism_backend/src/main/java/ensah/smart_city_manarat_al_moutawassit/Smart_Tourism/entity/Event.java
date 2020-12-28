@@ -20,7 +20,7 @@ public class Event {
 	
 	private String description;
 	
-	private Address localisation;
+	private String localisation;
 	
 	private boolean isPrivate;
 	
@@ -42,7 +42,7 @@ public class Event {
 	 * @param isPrivate
 	 * @param nbGuests
 	 */
-	public Event(String id, String name, Date date, String description, Address localisation, boolean isPrivate, int nbGuests) {
+	public Event(String id, String name, Date date, String description, String localisation, boolean isPrivate, int nbGuests) {
 		this.id = id;
 		this.name = name;
 		this.date = date;
@@ -62,7 +62,7 @@ public class Event {
 	 * @param isPrivate
 	 * @param nbGuests
 	 */
-	public Event(String id, String name, Date date, String description, Address localisation, boolean isPrivate) {
+	public Event(String id, String name, Date date, String description, String localisation, boolean isPrivate) {
 		this.id = id;
 		this.name = name;
 		this.date = date;
@@ -131,14 +131,14 @@ public class Event {
 	/**
 	 * @return the localisation
 	 */
-	public Address getLocalisation() {
+	public String getLocalisation() {
 		return localisation;
 	}
 
 	/**
 	 * @param localisation the localisation to set
 	 */
-	public void setLocalisation(Address localisation) {
+	public void setLocalisation(String localisation) {
 		this.localisation = localisation;
 	}
 
