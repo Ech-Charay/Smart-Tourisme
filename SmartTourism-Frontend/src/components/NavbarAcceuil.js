@@ -135,7 +135,7 @@ function NavbarAcceuil() {
                     <i className="now-ui-icons arrows-1_minimal-right"></i>
                     Dashboard
                   </DropdownItem>
-                  <DropdownItem to="/events_festivaux" tag={Link}>
+                  <DropdownItem to="/events_festivaux/list" tag={Link}>
                     <i className="now-ui-icons arrows-1_minimal-right"></i>
                     Evénements & Festivals
                   </DropdownItem>

@@ -5,8 +5,20 @@ import DefaultFooter from "components/Footers/DefaultFooter.js";
 import ServicesHeader from "components/Headers/ServicesHeader";
 import NavbarAcceuil from "components/NavbarAcceuil";
 import ShowEvent from "components/body/evenementsETfestivaux/ShowEvent";
+import AddEvent from "components/body/evenementsETfestivaux/AddEvent";
 
-function Events_Festivaux() {
+function Partie({action}){
+  if(action == "show")
+    return(
+      <ShowEvent/>
+    );
+  else
+  return(
+    <AddEvent/>
+  );
+};
+
+function Events_Festivaux(props) {
   React.useEffect(() => {
     document.body.classList.add("landing-page");
     document.body.classList.add("sidebar-collapse");
@@ -18,13 +30,14 @@ function Events_Festivaux() {
       document.body.classList.remove("sidebar-collapse");
     };
   }, []);
+
   return (
     <>
       <NavbarAcceuil />
       <div className="wrapper">
         <ServicesHeader title="Evénements et Festivaux." />
         <div className="section section-contact-us text-center">
-          <ShowEvent/>
+          <Partie action={props.action}/>
         </div>
         <DefaultFooter />
       </div>

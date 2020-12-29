@@ -46,7 +46,7 @@ class EventItem extends Component {
                         <CardSubtitle tag="h6" className="mb-2 text-muted">{this.props.item.place}</CardSubtitle>
                         <CardText>{this.props.item.date}</CardText>
                         <Button color="info" type="button" size="sm" onClick={this.interested}  > {this.state.interested}<i className={this.state.checked}></i></Button>
-                        <Button color="info" type="button" size="sm"><Link to="/events_festivaux" style={{ color: "white" }}>Details ..</Link></Button>
+                        <Button color="info" type="button" size="sm"><Link to="/events_festivaux/showEvent" style={{ color: "white" }}>Details ..</Link></Button>
 
                     </CardBody>
                 </Card>

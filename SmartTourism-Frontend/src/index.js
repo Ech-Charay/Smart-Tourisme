@@ -21,10 +21,19 @@ ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Switch>
-        <Route path="/acceuil" render={(props) => <Acceuil {...props} />} />
+      <Route path="/acceuil" render={(props) => <Acceuil {...props} />} />
+
         <Route
-          path="/events_festivaux"
-          render={(props) => <Events_Festivaux {...props} />}
+          path="/events_festivaux/list"
+          component={listEvents}/>
+
+        <Route
+          path="/events_festivaux/showEvent"
+          render={(props) => <Events_Festivaux action="show" {...props} />}
+        />
+        <Route
+          path="/events_festivaux/addEvent"
+          render={(props) => <Events_Festivaux action="add" {...props} />}
         />
 
         <Route path="/index" render={(props) => <Index {...props} />} />
@@ -44,10 +53,6 @@ ReactDOM.render(
           path="/login-page"
           render={(props) => <LoginPage {...props} />}
         />
-         
-        <Route
-          path="/list"
-          component={listEvents}/>
                 
         <Redirect to="/index" />
         <Redirect from="/" to="/index" />

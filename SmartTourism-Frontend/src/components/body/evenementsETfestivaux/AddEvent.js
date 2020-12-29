@@ -1,124 +1,133 @@
-import React from "react";
+import React, { Component } from "react";
+import axios from 'axios';
 
 // reactstrap components
 import {
   Button,
   Input,
-  InputGroupAddon,
-  InputGroupText,
   InputGroup,
   Container,
   Row,
   Col,
 } from "reactstrap";
+import Form from "reactstrap/lib/Form";
 
 // core components
 import FormGroup from "reactstrap/lib/FormGroup";
 import Label from "reactstrap/lib/Label";
+import { Redirect } from "react-router";
 
-function AddEvent() {
-  const [firstFocus, setFirstFocus] = React.useState(false);
-  const [lastFocus, setLastFocus] = React.useState(false);
-  React.useEffect(() => {
-    document.body.classList.add("landing-page");
-    document.body.classList.add("sidebar-collapse");
-    document.documentElement.classList.remove("nav-open");
-    window.scrollTo(0, 0);
-    document.body.scrollTop = 0;
-    return function cleanup() {
-      document.body.classList.remove("landing-page");
-      document.body.classList.remove("sidebar-collapse");
-    };
-  }, []);
-  return (
-          <Container>
-            <h2 className="title">Créer un évenement ou festival</h2>
-            <p className="description">Remplir ce formulaire.</p>
-            <Row>
-              <Col className="text-center ml-auto mr-auto" lg="6" md="8">
-                <InputGroup
-                  className={
-                    "input-lg" + (firstFocus ? " input-group-focus" : "")
-                  }
-                >
-                  <InputGroupAddon addonType="prepend">
-                    <InputGroupText>
-                      <i className="now-ui-icons users_circle-08"></i>
-                    </InputGroupText>
-                  </InputGroupAddon>
-                  <Input
-                    placeholder="Nom..."
-                    type="text"
-                    onFocus={() => setFirstFocus(true)}
-                    onBlur={() => setFirstFocus(false)}
-                  ></Input>
-                </InputGroup>
-                <InputGroup
-                  className={
-                    "input-lg" + (firstFocus ? " input-group-focus" : "")
-                  }
-                >
-                  <InputGroupAddon addonType="prepend">
-                    <InputGroupText>
-                      <i className="now-ui-icons ui-1_calendar-60"></i>
-                    </InputGroupText>
-                  </InputGroupAddon>
-                  <Input
-                    placeholder="Date..."
-                    type="text"
-                    onFocus={() => setFirstFocus(true)}
-                    onBlur={() => setFirstFocus(false)}
-                  ></Input>
-                </InputGroup>
-                <InputGroup
-                  className={
-                    "input-lg" + (firstFocus ? " input-group-focus" : "")
-                  }
-                >
-                  <InputGroupAddon addonType="prepend">
-                    <InputGroupText>
-                    <i className="now-ui-icons location_pin"></i>
-                    </InputGroupText>
-                  </InputGroupAddon>
-                  <Input
-                    placeholder="Localisation..."
-                    type="text"
-                    onFocus={() => setFirstFocus(true)}
-                    onBlur={() => setFirstFocus(false)}
-                  ></Input>
-                </InputGroup>
-                <div className="textarea-container">
-                  <Input
-                    cols="80"
-                    name="name"
-                    placeholder="Description de l'évenement..."
-                    rows="100"
-                    type="textarea"
-                  ></Input>
-                </div>
-                <FormGroup check>
-                    <Label check>
-                        <Input type="checkbox"></Input>
-                        <span className="form-check-sign"></span>
-                        Accées public
-                    </Label>
-                </FormGroup>
-                <div className="send-button">
-                  <Button
-                    block
-                    className="btn-round"
-                    color="info"
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
-                    size="lg"
-                  >
-                    Confirmer
-                  </Button>
-                </div>
-              </Col>
-            </Row>
-          </Container>
-  );
+class AddEvent extends Component {
+    constructor(props){
+      super(props);
+
+      this.state={
+        name :'',
+        date :'',
+        localisation :'',
+        description :'',
+        private :false,
+      }
+    }
+
+    changeHandler = (e) =>{
+      const target = e.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const name = target.name;
+
+    this.setState({
+      [name]: value
+    });
+    }
+    
+    submitHandler = (e) =>{
+      e.preventDefault()
+      console.log(this.state)
+      axios.post("localhost:8080/event",{
+        method: "POST",
+        body: JSON.stringify(this.state),
+        headers: {
+          "Content-Type": "application/json"
+        }}).then( response =>{
+          console.log(response)
+          return <Redirect to='/events_festivaux/showEvent'/>;
+        }).catch(error =>{
+          console.log(error)
+          return <Redirect to='/events_festivaux/showEvent'/>;
+        })
+        return <Redirect to='/events_festivaux/showEvent'/>;
+    }
+
+  render(){
+    
+    return (
+      <Container>
+        <h2 className="title">Créer un évenement ou festival</h2>
+        <p className="description">Remplir ce formulaire.</p>
+        <Row> 
+        <Col className="text-center ml-auto mr-auto" lg="6" md="8">
+        <Form onSubmit={this.submitHandler}>
+            <InputGroup>
+              <Input
+                placeholder="Nom..."
+                type="text"
+                name="name"
+                onChange={this.changeHandler}
+              ></Input>
+            </InputGroup>
+            <InputGroup>
+              <Input
+                placeholder="Date..."
+                type="date"
+                name="date"
+                onChange={this.changeHandler}
+              ></Input>
+            </InputGroup>
+            <InputGroup>
+              <Input
+                placeholder="Localisation..."
+                type="text"
+                name="localisation"
+                onChange={this.changeHandler}
+              ></Input>
+            </InputGroup>
+            <div className="textarea-container">
+              <Input
+                cols="80"
+                name="description"
+                onChange={this.changeHandler}
+                placeholder="Description de l'évenement..."
+                rows="100"
+                type="textarea"
+              ></Input>
+            </div>
+            <FormGroup check>
+                <Label check>
+                    <Input type="checkbox" name="private" 
+                    onChange={this.changeHandler}
+                    checked={this.state.private}></Input>
+                    <span className="form-check-sign"></span>
+                    Accées public
+                </Label>
+            </FormGroup>
+            <div className="send-button">
+              <Button
+                block
+                className="btn-round"
+                color="info"
+                type="submit"
+                size="lg"
+              >
+                Confirmer
+              </Button>
+            </div>
+          </Form>
+          </Col>
+        </Row>
+      </Container>
+);
+  }
+  
 }
 
 export default AddEvent;
