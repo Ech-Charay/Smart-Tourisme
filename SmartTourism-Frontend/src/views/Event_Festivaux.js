@@ -3,9 +3,9 @@ import React from "react";
 // core components
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 import ServicesHeader from "components/Headers/ServicesHeader";
-import NavbarAcceuil from "components/NavbarAcceuil";
 import ShowEvent from "components/body/evenementsETfestivaux/ShowEvent";
 import AddEvent from "components/body/evenementsETfestivaux/AddEvent";
+import NavbarAcceuil from "components/Navbars/NavbarAcceuil";
 
 function Partie({action}){
   if(action == "show")

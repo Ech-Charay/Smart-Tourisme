@@ -3,11 +3,11 @@ import React, { Component } from "react";
 // core components
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 import ServicesHeader from "components/Headers/ServicesHeader";
-import NavbarAcceuil from "components/NavbarAcceuil";
 import ShowEvent from "components/body/evenementsETfestivaux/ShowEvent";
 import { Container ,Row} from 'reactstrap';
 import image from "assets/img/event.jpg";
 import EventItem from "components/body/evenementsETfestivaux/EventItem";
+import NavbarAcceuil from "components/Navbars/NavbarAcceuil";
 
 class ListEvents extends Component {
   

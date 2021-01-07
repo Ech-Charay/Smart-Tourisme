@@ -1,16 +1,8 @@
 import React from "react";
-
-// reactstrap components
-// import {
-// } from "reactstrap";
-
-// core components
-import NavbarAcceuil from "components/NavbarAcceuil.js";
-import Header from "components/Header.js";
-
-// sections for this page
 import BodyAcceuil from "components/body/bodyAcceuil";
-import DarkFooter from "components/Footers/DarkFooter";
+import DefaultFooter from "components/Footers/DefaultFooter";
+import Header from "components/Headers/Header";
+import NavbarAcceuil from "components/Navbars/NavbarAcceuil";
 
 function Acceuil() {
   React.useEffect(() => {
@@ -26,14 +18,14 @@ function Acceuil() {
   });
   return (
     <>
-      <NavbarAcceuil />
+      <NavbarAcceuil/>
       <div className="wrapper">
         <Header />
         <div className="main">
           <BodyAcceuil/>
         </div>
       </div>
-      <DarkFooter />
+      <DefaultFooter />
     </>
   );
 }

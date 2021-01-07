@@ -43,7 +43,7 @@ class AddEvent extends Component {
     submitHandler = (e) =>{
       e.preventDefault()
       console.log(this.state)
-      axios.post("localhost:8080/event",{
+      axios.post("",{
         method: "POST",
         body: JSON.stringify(this.state),
         headers: {
