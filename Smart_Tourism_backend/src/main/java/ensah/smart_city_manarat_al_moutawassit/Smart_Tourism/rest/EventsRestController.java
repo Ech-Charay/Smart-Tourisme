@@ -3,6 +3,7 @@ package ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.rest;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,6 +21,7 @@ import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.service.EventServic
  * @author ECH-CHARAY Mohamed, MAACHI Bassma, EL JAIMI Walid
  *
  */
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/event")
 public class EventsRestController {

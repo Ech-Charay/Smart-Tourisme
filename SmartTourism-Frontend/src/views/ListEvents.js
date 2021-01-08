@@ -1,55 +1,46 @@
-import React, { Component } from "react";
-
-// core components
-import DefaultFooter from "components/Footers/DefaultFooter.js";
-import ServicesHeader from "components/Headers/ServicesHeader";
-import ShowEvent from "components/body/evenementsETfestivaux/ShowEvent";
-import { Container ,Row} from 'reactstrap';
-import image from "assets/img/event.jpg";
+import React from "react";
 import EventItem from "components/body/evenementsETfestivaux/EventItem";
-import NavbarAcceuil from "components/Navbars/NavbarAcceuil";
+import { Container ,Row} from 'reactstrap';
+import { Loading } from 'components/LoadingComponent';
+import { baseUrl } from '../shared/baseUrl';
 
-class ListEvents extends Component {
-  
-  constructor(props)
-  {
-    super(props);
-    this.state={
-      item :
-            {
-                imag : image,
-                title : "Festival Hoceima",
-                place:"Al Hoceima",
-                date :"01/02/2020"
-            }
-    }
-  }
-  render()
-  {
-    return (
-      <>
-        <NavbarAcceuil />
-        <div className="wrapper">
-          <ServicesHeader title="Evénements et Festivaux." />
-          <div className="section section-contact-us">
-            <Container>
-              <h2>Liste des évènements : </h2>
-              <br></br>
-              <Row>
-                <EventItem item={this.state.item} />
-                <EventItem item={this.state.item} />
-                <EventItem item={this.state.item} />
-
-              </Row>
-  
-            </Container>
-          </div>
-          <DefaultFooter />
+const ListEvents = (props) => {
+    const list = props.events.events.map((event) => {
+      return(
+        <div className="col-12 col-md-4">
+          <EventItem event={event} />
         </div>
-      </>
-    );
-  }
- 
-}
+      )
+    });
+    if (props.events.isLoading) {
+      return(
+        <div className="container">
+          <div className="row">            
+            <Loading />
+          </div>
+        </div>
+      );
+    }
+    else if (props.events.errMess) {
+      return(
+        <div className="container">
+            <div className="row"> 
+              <div className="col-12">
+                <h4>{props.events.errMess}</h4>
+              </div>
+            </div>
+        </div>
+      );
+    }
+    else{
+      return (
+          <Container>
+            <h2 className="title">Liste des évenements ou festivaux</h2>
+            <br></br>
+            <Row>{list}</Row>
+          </Container>
+      );
+    }
+  }     
 
 export default ListEvents;
