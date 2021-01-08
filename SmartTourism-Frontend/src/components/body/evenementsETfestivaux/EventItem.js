@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import image from "assets/img/event.jpg";
-
+import image from "assets/img/ev.jpg";
 import {  Button,Card ,CardBody , CardText ,CardTitle ,CardImg,CardSubtitle} from 'reactstrap';
+import { baseUrl } from "shared/baseUrl";
 
 
 class EventItem extends Component {
@@ -20,17 +20,24 @@ class EventItem extends Component {
 
     interested() {
         const txt = this.state.interested;
+        var url;
 
         if (txt === "s'intéresser") {
             this.setState({
                 interested: "intéressé",
                 checked: "fa fa-check ml-2"
             })
+            url =':interested';
         }
         if (txt === "intéressé") {
             this.setState({ interested: "s'intéresser", checked: "" })
-
+        url = ':not_interested';
         }
+        fetch(baseUrl + 'event/'+this.props.event.id+url,{
+            method: "PUT"})
+          .then(response => response.json())
+          .then(event => console.log(event))
+          .catch(error => console.log(error));
     }
 
 
