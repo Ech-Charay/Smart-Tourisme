@@ -7,14 +7,14 @@ export const addEvent = (event) => ({
     payload: event
   });
   
-  export const postEvent = (name, date, localisation, description, private) => (dispatch) => {
+export const postEvent = (name, date, localisation, description, isPrivate) => (dispatch) => {
   
     const newEvent = {
         name: name,
         date: date,
         localisation: localisation,
         description: description,
-        private: private
+        isPrivate: isPrivate
     };
     
     return fetch(baseUrl + 'events', {
@@ -60,7 +60,7 @@ export const fetchEvents = () => (dispatch) => {
 
     dispatch(eventsLoading(true));
 
-    return fetch(baseUrl + 'events')
+    return fetch(baseUrl + 'event')
     .then(response => {
         if (response.ok) {
           return response;

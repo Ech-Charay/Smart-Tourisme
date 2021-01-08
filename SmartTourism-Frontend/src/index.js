@@ -10,7 +10,6 @@ import "assets/demo/nucleo-icons-page-styles.css?v=1.4.0";
 // pages for this kit
 import Acceuil from "views/Acceuil.js";
 import Events_Festivaux from "views/Event_Festivaux";
-import listEvents from "views/ListEvents";
 import { Provider } from 'react-redux';
 import { ConfigureStore } from './redux/configureStore';
 
@@ -22,20 +21,9 @@ ReactDOM.render(
       <BrowserRouter>
         <Switch>
           <Switch>
-          <Route path="/acceuil" render={(props) => <Acceuil {...props} />} />
+            <Route path="/acceuil" render={(props) => <Acceuil {...props} />} />
+            <Route path="/events_festivaux" render={() => <Events_Festivaux/>} />
 
-            <Route
-              path="/events_festivaux/list"
-              component={listEvents}/>
-
-            <Route
-              path="/events_festivaux/showEvent"
-              render={(props) => <Events_Festivaux action="show" {...props} />}
-            />
-            <Route
-              path="/events_festivaux/addEvent"
-              render={(props) => <Events_Festivaux action="add" {...props} />}
-            />      
             <Redirect to="/acceuil" />
             <Redirect from="/" to="/acceuil" />
           </Switch>
