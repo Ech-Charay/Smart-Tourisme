@@ -17,7 +17,7 @@ export const postEvent = (name, date, localisation, description, isPrivate) => (
         isPrivate: isPrivate
     };
     
-    return fetch(baseUrl + 'events', {
+    return fetch(baseUrl + 'event', {
         method: "POST",
         body: JSON.stringify(newEvent),
         headers: {
@@ -38,7 +38,8 @@ export const postEvent = (name, date, localisation, description, isPrivate) => (
             throw error;
       })
     .then(response => response.json())
-    .then(response => dispatch(addEvent(response)))
+    .then(event =>  { dispatch(addEvent(event)); 
+      alert("votre évenement est crée")})
     .catch(error =>  { console.log('post events', error.message); alert('Your event could not be posted\nError: '+error.message); });
   };
 

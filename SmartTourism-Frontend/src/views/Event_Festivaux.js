@@ -7,8 +7,7 @@ import AddEvent from "components/body/evenementsETfestivaux/AddEvent";
 import NavbarAcceuil from "components/Navbars/NavbarAcceuil";
 import ListEvents from "views/ListEvents";
 import { connect } from 'react-redux';
-import { postEvent, fetchEvents } from '../redux/ActionCreators';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import { postEvent, fetchEvents  } from '../redux/ActionCreators';
 
 const mapStateToProps = state => {
   return {
@@ -41,7 +40,7 @@ class Events_Festivaux extends Component {
 
     const EventWithId = ({match}) => {
       return(
-        <ShowEvent event={this.props.events.events.filter((event) => event.id === (match.params.eventId,10))[0]}
+        <ShowEvent event={this.props.events.events.filter((event) => event.id === (match.params.eventId ))[0]}
           isLoading={this.props.events.isLoading}
           errMess={this.props.events.errMess}
         />
@@ -53,18 +52,16 @@ class Events_Festivaux extends Component {
         <div className="wrapper">
           <ServicesHeader title="Evénements et Festivaux." />
           <div className="section section-contact-us text-center">
-            <TransitionGroup>
-              <CSSTransition key={this.props.location.key} classNames="page" timeout={300}>
-                <Switch location={this.props.location}>
+                <Switch>
+                <Switch>
+                    <Route 
+                    path="/events_festivaux/addEvent" component={() => <AddEvent  postEvent={this.props.postEvent}/>} /> 
                     <Route
                       path="/events_festivaux/list" component={() => <ListEvents events={this.props.events} />} />
                     <Route path="/events_festivaux/:eventId" component={EventWithId}/>
-                    <Route path="/events_festivaux/addEvent"
-                      component={(props) => <AddEvent {...props} />} /> 
                     <Redirect from="/events_festivaux/" to="/events_festivaux/list" /> 
                 </Switch>
-              </CSSTransition>
-            </TransitionGroup>
+                </Switch>
           </div>
           <DefaultFooter />
         </div>

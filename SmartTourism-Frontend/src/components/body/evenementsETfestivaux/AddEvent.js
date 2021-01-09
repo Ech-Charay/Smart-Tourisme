@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from 'axios';
+import { useHistory } from "react-router"
 
 // reactstrap components
 import {
@@ -42,20 +42,7 @@ class AddEvent extends Component {
     
     submitHandler = (e) =>{
       e.preventDefault()
-      console.log(this.state)
-      axios.post("",{
-        method: "POST",
-        body: JSON.stringify(this.state),
-        headers: {
-          "Content-Type": "application/json"
-        }}).then( response =>{
-          console.log(response)
-          return <Redirect to='/events_festivaux/showEvent'/>;
-        }).catch(error =>{
-          console.log(error)
-          return <Redirect to='/events_festivaux/showEvent'/>;
-        })
-        return <Redirect to='/events_festivaux/showEvent'/>;
+      this.props.postEvent(this.state.name, this.state.date, this.state.localisation, this.state.description, this.state.private);
     }
 
   render(){

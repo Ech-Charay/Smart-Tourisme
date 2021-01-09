@@ -33,7 +33,7 @@ const ShowEvent= (props) =>{
       <Container>
         <Row>
           <Col className="ml-auto mr-auto text-center" md="8">
-            <h2 className="title">{this.props.event.name}</h2>
+            <h2 className="title">{props.event.name}</h2>
           </Col>
         </Row>
         <div className="separator separator-primary"></div>
@@ -63,26 +63,17 @@ const ShowEvent= (props) =>{
                 }}
               ></div>
               <h3>
-                Bienvenue le {this.props.event.date} a {this.props.event.localisation}
+                Bienvenue le {new Intl.DateTimeFormat('fr-FR', { year: 'numeric', month: 'long', day: '2-digit', hour: '2-digit', minute: '2-digit'}).format(new Date(Date.parse(props.event.date)))} 
               </h3>
+              <h3> {props.event.localisation}</h3>
             </Col>
           </Row>
           <div className="separator separator-primary"></div>
           <Row>
             <Col className="ml-auto mr-auto text-center" md="8">
                 <p>
-                  Description de l'évenement
+                {props.event.description}
                 </p>
-                <p>
-                {this.props.event.description}
-                </p>
-                <Button
-                          className="btn-round"
-                          color="info"
-                          href="#pablo"
-                          onClick={(e) => e.preventDefault()}
-                          size="lg"
-                        >S'interesse</Button>
             </Col>
           </Row>
         </div>
