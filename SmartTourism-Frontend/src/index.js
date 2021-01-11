@@ -12,6 +12,7 @@ import Acceuil from "views/Acceuil.js";
 import Events_Festivaux from "views/Event_Festivaux";
 import { Provider } from 'react-redux';
 import { ConfigureStore } from './redux/configureStore';
+import Albums from "views/Albums";
 
 const store = ConfigureStore();
 
@@ -23,7 +24,7 @@ ReactDOM.render(
           <Switch>
             <Route path="/acceuil" render={(props) => <Acceuil {...props} />} />
             <Route path="/events_festivaux" render={() => <Events_Festivaux/>} />
-
+            <Route path="/album" component={Albums} />
             <Redirect to="/acceuil" />
             <Redirect from="/" to="/acceuil" />
           </Switch>
