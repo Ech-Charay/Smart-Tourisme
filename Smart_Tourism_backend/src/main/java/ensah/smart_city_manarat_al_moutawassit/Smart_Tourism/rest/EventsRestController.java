@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.dto.UserId;
 import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity.Event;
 import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.service.EventService;
 
@@ -70,22 +71,33 @@ public class EventsRestController {
 	}
 	
 	/**
+	 * Endpoint to retrieve a single event by its id
+	 * @return event
+	 */
+	@GetMapping("/{eventId}")
+	public Event findOne(@PathVariable String eventId){
+		return eventService.findOne(eventId);
+	}
+	
+	/**
 	 * Endpoint to add a visitor to the guests list of an event
 	 * @param eventId : id of the event
+	 * @param userId : id of the guest to add
 	 * @return the event with its new guests list
 	 */
 	@PutMapping("/{eventId}:interested")
-	public Event addGuest(@PathVariable String eventId) {
-		return eventService.addGuest(eventId);
+	public Event addGuest(@PathVariable String eventId, @RequestBody UserId userId) {
+		return eventService.addGuest(eventId, userId.getuserId());
 	}
 	
 	/**
 	 * Endpoint to remove a visitor from the guests list of an event
 	 * @param eventId : id of the event
+	 * @param userId : id of the guest to remove
 	 * @return the event with its new guests list
 	 */
 	@PutMapping("/{eventId}:not_interested")
-	public Event removeGuest(@PathVariable String eventId) {
-		return eventService.removeGuest(eventId);
+	public Event removeGuest(@PathVariable String eventId, @RequestBody UserId userId) {
+		return eventService.removeGuest(eventId, userId.getuserId());
 	}
 }

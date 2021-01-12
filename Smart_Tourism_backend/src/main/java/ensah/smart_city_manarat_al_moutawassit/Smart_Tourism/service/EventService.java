@@ -29,19 +29,27 @@ public interface EventService {
 	 * @return list of events
 	 */
 	public List<Event> findAll();
+	
+	/**
+	 * retrieve a single event by its id from the database
+	 * @return event
+	 */
+	public Event findOne(String eventId);
 
 	/**
 	 * increment nbGuests counter in the event with id == eventId
 	 * @param eventId : id of the event
+	 * @param userId : id of the guest to add
 	 * @return the event with its new guests List
 	 */
-	public Event addGuest(String eventId);
+	public Event addGuest(String eventId, String userId);
 
 	/**
 	 * decrement nbGuests counter in the event with id == eventId
 	 * @param eventId : id of the event
+	 * @param userId : id of the guest to remove
 	 * @return the event with its new guests List
 	 */
-	public Event removeGuest(String eventId);
+	public Event removeGuest(String eventId, String userId);
 	
 }

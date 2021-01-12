@@ -1,6 +1,8 @@
 package ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.data.annotation.Id;
 
@@ -24,7 +26,7 @@ public class Event {
 	
 	private boolean isPrivate;
 	
-	private int nbGuests;
+	private List<Visitor> guests;
 
 
 	/**
@@ -40,16 +42,16 @@ public class Event {
 	 * @param description
 	 * @param localisation
 	 * @param isPrivate
-	 * @param nbGuests
+	 * @param guests
 	 */
-	public Event(String id, String name, Date date, String description, String localisation, boolean isPrivate, int nbGuests) {
+	public Event(String id, String name, Date date, String description, String localisation, boolean isPrivate, List<Visitor> guests) {
 		this.id = id;
 		this.name = name;
 		this.date = date;
 		this.description = description;
 		this.localisation = localisation;
 		this.isPrivate = isPrivate;
-		this.nbGuests = nbGuests;
+		this.guests = guests;
 	}
 	
 	/**
@@ -60,7 +62,6 @@ public class Event {
 	 * @param description
 	 * @param localisation
 	 * @param isPrivate
-	 * @param nbGuests
 	 */
 	public Event(String id, String name, Date date, String description, String localisation, boolean isPrivate) {
 		this.id = id;
@@ -69,7 +70,7 @@ public class Event {
 		this.description = description;
 		this.localisation = localisation;
 		this.isPrivate = isPrivate;
-		this.nbGuests = 0;
+		this.guests = new ArrayList<Visitor>();
 	}
 
 	/**
@@ -159,19 +160,46 @@ public class Event {
 	/**
 	 * @return the nbGuests
 	 */
-	public int getNbGuests() {
-		return nbGuests;
+	public List<Visitor> getGuests() {
+		return guests;
 	}
 
 	/**
 	 * @param nbGuests the nbGuests to set
 	 */
-	public void setNbGuests(int nbGuests) {
-		this.nbGuests = nbGuests;
+	public void setGuests(List<Visitor> guests) {
+		if(guests == null)
+			this.guests = new ArrayList<Visitor>();
+		else
+			this.guests = guests;
+	}
+	
+	/**
+	 * add a guest to the list of guests
+	 * @param guest
+	 */
+	public void addGuest(Visitor guest) {
+		if(guest != null) {
+			this.guests.add(guest);
+		}
+	}
+	
+	/**
+	 * remove a guest from the list of guests
+	 * @param guestId: id of the guest to remove
+	 */
+	public void removeGuest(String guestId) {
+		for(int i = 0 ; i < this.guests.size() ; i++) {
+			if(this.guests.get(i).getUserId().equals(guestId)) {
+				this.guests.remove(i);
+				break;
+			}
+		}
 	}
 
 	@Override
 	public String toString() {
+		final int maxLen = 10;
 		StringBuilder builder = new StringBuilder();
 		builder.append("Event [");
 		if (id != null)
@@ -184,7 +212,10 @@ public class Event {
 			builder.append("description=").append(description).append(", ");
 		if (localisation != null)
 			builder.append("localisation=").append(localisation).append(", ");
-		builder.append("isPrivate=").append(isPrivate).append(", nbGuests=").append(nbGuests).append("]");
+		builder.append("isPrivate=").append(isPrivate).append(", ");
+		if (guests != null)
+			builder.append("guests=").append(guests.subList(0, Math.min(guests.size(), maxLen)));
+		builder.append("]");
 		return builder.toString();
 	}
 

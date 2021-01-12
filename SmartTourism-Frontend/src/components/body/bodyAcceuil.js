@@ -1,19 +1,11 @@
 import React, { Component } from 'react';
 import {
-    Button,
-
     Container,
     Row,
     Col,
 } from "reactstrap";
 
 class BodyAcceuil extends Component {
-
-    constructor(props) {
-        super(props);
-    }
-
-
 
     render() {
         return (
@@ -39,7 +31,7 @@ class BodyAcceuil extends Component {
                         <Row>
                             <Col md="3">
                                 <div className="team-player">
-                                    <span style={{ color: "#00bcff" }}><i class="fa fa-map-marker-alt fa-7x" aria-hidden="true"></i></span>
+                                    <span style={{ color: "#00bcff" }}><i className="fa fa-map-marker-alt fa-7x" aria-hidden="true"></i></span>
                                     <h4 className="title">Guide</h4>
                                     <p className="description">
                                         On vous suit pas à pas dans vos trajets.
@@ -49,7 +41,7 @@ class BodyAcceuil extends Component {
                             </Col>
                             <Col md="3">
                                 <div className="team-player">
-                                    <span style={{ color: "#00bcff" }}> <i class="fa fa-camera-retro fa-7x"></i>  </span>
+                                    <span style={{ color: "#00bcff" }}> <i className="fa fa-camera-retro fa-7x"></i>  </span>
                                     <h4 className="title">Album de Souvenir</h4>
                                     <p className="description">
                                         On vous génére un album de souvenir que vous pouvez costumiser comme vous voulez.
@@ -59,7 +51,7 @@ class BodyAcceuil extends Component {
                             </Col>
                             <Col md="3">
                                 <div className="team-player">
-                                    <span style={{ color: "#00bcff" }}><i class="fa fa-users fa-7x" aria-hidden="true"></i>  </span>
+                                    <span style={{ color: "#00bcff" }}><i className="fa fa-users fa-7x" aria-hidden="true"></i>  </span>
                                     <h4 className="title">Dashboard</h4>
                                     <p className="description">
                                         Consultez le dashboard des visites pour en avoir idée sur les effectifs à chaque place en temps réel.
@@ -69,7 +61,7 @@ class BodyAcceuil extends Component {
                             </Col>
                             <Col md="3">
                                 <div className="team-player">
-                                    <span style={{ color: "#00bcff" }}><i class="fa fa-calendar-alt fa-7x" aria-hidden="true"></i></span>
+                                    <span style={{ color: "#00bcff" }}><i className="fa fa-calendar-alt fa-7x" aria-hidden="true"></i></span>
                                     <h4 className="title">Events & Festivals</h4>
                                     <p className="description">
                                         Consultez les événements à venir et marquez votre présence

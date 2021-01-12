@@ -1,6 +1,8 @@
 
 export const initialState = {
-    events: []
+    events: [],
+    authenticated: false,
+    authToken: ""
 };
 
 export const Reducer = (state = initialState, action) => {

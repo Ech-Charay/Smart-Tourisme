@@ -1,12 +1,14 @@
 package ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.dao.EventRepository;
 import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity.Event;
+import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity.Visitor;
 
 /**
  * Event Service Implementation
@@ -18,6 +20,8 @@ public class EventServiceImpl implements EventService {
 	
 	@Autowired
 	private EventRepository repository;
+	
+	@Autowired UserService userService;
 
 	/**
 	 * Create/update an event. If the id is not specified it creates that event in the database.
@@ -29,7 +33,7 @@ public class EventServiceImpl implements EventService {
 	public Event save(Event event) {
 		//if the id is not specified we create a new element
 		if(event.getId() == null || event.getId().isEmpty()) {
-			event.setNbGuests(0);
+			event.setGuests(null);
 			return repository.save(event);
 		}
 		
@@ -42,12 +46,12 @@ public class EventServiceImpl implements EventService {
 				element.setDescription(event.getDescription());
 				element.setLocalisation(event.getLocalisation());
 				element.setPrivate(event.isPrivate());
-				element.setNbGuests(event.getNbGuests());
+				element.setGuests(event.getGuests());
 				return repository.save(element);
 			})
 			.orElseGet(() -> {
 				event.setId(null);
-				event.setNbGuests(0);
+				event.setGuests(null);
 				return repository.save(event);
 			});
 	}
@@ -69,17 +73,33 @@ public class EventServiceImpl implements EventService {
 	public List<Event> findAll() {
 		return repository.findAll();
 	}
+	
+	/**
+	 * retrieve a single event by its id from the database
+	 * @return event
+	 */
+	@Override
+	public Event findOne(String eventId) {
+		Optional<Event> result = repository.findById(eventId);
+		Event event = null;
+		if(result.isPresent())
+			event = result.get();
+		return event;
+	}
 
 	/**
 	 * increment nbGuests counter in the event with id == eventId
 	 * @param eventId : id of the event
+	 * @param userId : id of the guest to add
 	 * @return the event with its new guests List
 	 */
 	@Override
-	public Event addGuest(String eventId) {
+	public Event addGuest(String eventId, String userId) {
 		return repository.findById(eventId)
 				.map(event -> {
-					event.setNbGuests(event.getNbGuests() + 1);
+					Visitor guest = userService.findVisitorById(userId);
+					//System.out.println(guest.toString());
+					event.addGuest(guest);
 					return repository.save(event);
 				})
 				.orElseGet(() -> {
@@ -90,14 +110,14 @@ public class EventServiceImpl implements EventService {
 	/**
 	 * decrement nbGuests counter in the event with id == eventId
 	 * @param eventId : id of the event
+	 * @param userId : id of the guest to remove
 	 * @return the event with its new guests List
 	 */
 	@Override
-	public Event removeGuest(String eventId) {
+	public Event removeGuest(String eventId, String userId) {
 		return repository.findById(eventId)
 				.map(event -> {
-					if(event.getNbGuests() > 0)
-						event.setNbGuests(event.getNbGuests() - 1);
+					event.removeGuest(userId);
 					return repository.save(event);
 				})
 				.orElseGet(() -> {

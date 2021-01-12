@@ -9,7 +9,7 @@ import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity.Visitor;
  * @author ECH-CHARAY Mohamed, MAACHI Bassma, EL JAIMI Walid
  *
  */
-public interface VisitorRepository extends MongoRepository<Visitor, String>{
+public interface VisitorRepository extends MongoRepository<Visitor, String	>{
 	
 	/**
 	 * Method to fetch a Visitor from Mongodb Server by it's Email

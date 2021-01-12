@@ -6,13 +6,14 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.config.TokenProvider;
-import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.dto.AuthToken;
+import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.dto.AuthResponse;
 import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.dto.LoginUser;
 import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.dto.UserDTO;
 import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity.User;
@@ -23,6 +24,7 @@ import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.service.UserService
  * @author ECH-CHARAY Mohamed, MAACHI Bassma, EL JAIMI Walid
  *
  */
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/users")
 public class UsersRestController {
@@ -55,14 +57,15 @@ public class UsersRestController {
 	@PostMapping("/login")
 	public ResponseEntity<?> signIn(@RequestBody LoginUser loginUser) {
 		final Authentication authentication = authenticationManager.authenticate(
-				new UsernamePasswordAuthenticationToken(
-						loginUser.getEmail(),
-						loginUser.getPassword()
-						)
-				);
+			new UsernamePasswordAuthenticationToken(
+				loginUser.getEmail(),
+				loginUser.getPassword()
+			)
+		);
 		SecurityContextHolder.getContext().setAuthentication(authentication);
 		final String token = jwtTokenUtil.generateToken(authentication);
-		return ResponseEntity.ok(new AuthToken(token));
+		User user = userService.findOne(loginUser.getEmail());
+		return ResponseEntity.ok(new AuthResponse(token, user));
 	}
 	
 }

@@ -3,6 +3,7 @@ package ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.service;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -131,6 +132,19 @@ public class UserServiceImpl implements UserDetailsService, UserService {
 		if(user == null)
 			user = sectorRepository.findByEmail(email);
 		return user;
+	}
+	
+	/**
+	 * retrieve a given visitor by its id
+	 * @return visitor
+	 */
+	@Override
+	public Visitor findVisitorById(String id) {
+		Visitor visitor = null;
+		Optional<Visitor> result = visitorRepository.findById(id);
+		if(result.isPresent())	
+			visitor = result.get();
+		return visitor;
 	}
 
 	/**

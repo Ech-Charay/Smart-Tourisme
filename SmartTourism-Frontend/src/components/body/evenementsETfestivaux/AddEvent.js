@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { useHistory } from "react-router"
-
 // reactstrap components
 import {
   Button,
@@ -15,7 +13,6 @@ import Form from "reactstrap/lib/Form";
 // core components
 import FormGroup from "reactstrap/lib/FormGroup";
 import Label from "reactstrap/lib/Label";
-import { Redirect } from "react-router";
 
 class AddEvent extends Component {
     constructor(props){

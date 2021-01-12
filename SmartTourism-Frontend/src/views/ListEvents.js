@@ -2,7 +2,6 @@ import React from "react";
 import EventItem from "components/body/evenementsETfestivaux/EventItem";
 import { Container ,Row} from 'reactstrap';
 import { Loading } from 'components/LoadingComponent';
-import { baseUrl } from '../shared/baseUrl';
 
 const ListEvents = (props) => {
     const list = props.events.events.map((event) => {

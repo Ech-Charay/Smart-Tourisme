@@ -20,7 +20,7 @@ const mapDispatchToProps = dispatch => ({
   fetchEvents: () => dispatch(fetchEvents()),
 });
 
-class Events_Festivaux extends Component {
+class EventsFestivaux extends Component {
   constructor(props){
     super(props);
 
@@ -70,4 +70,4 @@ class Events_Festivaux extends Component {
   }
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Events_Festivaux));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(EventsFestivaux));

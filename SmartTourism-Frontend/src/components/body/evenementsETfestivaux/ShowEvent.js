@@ -7,7 +7,6 @@ import {
   Row,
   Col,
 } from "reactstrap";
-import Button from "reactstrap/lib/Button";
 
 const ShowEvent= (props) =>{
   if (props.isLoading) {
