@@ -64,7 +64,9 @@ class AlbumBody extends Component {
                             <h3 className="title">Turn your photos into videos with the easiest online video tool</h3>
                             <h5 className="description">
                                 Simply add your photos into our online video creation software and quickly rearrange your pictures to tell your story.
-                                Drag and drop your way to a stunning video in minutes. No video editing experience necessary!
+                                Drag and drop your way to a stunning video in minutes. No video editing experience necessary!<br/>
+                                            <span style={{color:"red"}}>( only .png format )</span>
+
                             </h5>
 
                             <form onSubmit={this.handleSubmit} method="post" encType="multipart/form-data">
