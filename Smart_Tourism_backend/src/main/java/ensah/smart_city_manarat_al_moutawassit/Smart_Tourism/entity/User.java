@@ -1,6 +1,7 @@
 package ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -14,6 +15,7 @@ public class User {
 	@Id
 	private String userId;
 	
+	@Indexed(unique = true)
 	private String email;
 	
 	@JsonIgnore

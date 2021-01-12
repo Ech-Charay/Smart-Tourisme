@@ -92,6 +92,40 @@ export const fetchEvents = () => (dispatch) => {
     .catch(error => dispatch(eventsFailed(error.message)));
 }
 
+export const showInterest = (eventId, userId, interested) => (dispatch) => {
+  let token = window.localStorage.getItem("authToken")? window.localStorage.getItem("authToken"): "";
+  let url;
+  if(interested)
+    url = ":interested";
+  else
+    url = ":not_interested";
+
+  fetch(baseUrl + 'event/'+eventId+url,{
+    method: "PUT",
+    body: JSON.stringify(userId),
+    headers: {
+      "Authorization": "Bearer " + token,
+      "Content-Type": "application/json"
+    },
+    credentials: "same-origin"
+  })
+  .then(response => {
+        if (response.ok) {
+          return response;
+        } else {
+          var error = new Error('Error ' + response.status + ': ' + response.statusText);
+          error.response = response;
+          throw error;
+        }
+      },
+      error => {
+            throw error;
+      })
+    .then(response => response.json())
+    .then(event =>  fetchEvents())
+    .catch(error =>  { console.log('put event', error.message); alert('Error: '+error.message); });
+}
+
 export const signup = (type, username, password, name, description, activityField, birthday, city, country, languages, gender) => (dispatch) => {
 
     var user = {type: type, email: username, password: password, name: name};
@@ -134,7 +168,7 @@ export const signup = (type, username, password, name, description, activityFiel
     })
     .catch(error =>  {
       console.log('signup', error.message);
-      alert("Votre Compte n'a pas pu être créé.");
+      alert("Votre Compte n'a pas pu être créé. \n " + error.message);
     });
   };
 
@@ -172,6 +206,10 @@ export const signup = (type, username, password, name, description, activityFiel
       dispatch(loginFailed(error.message))
     });
   };
+
+  export const logout = () => ({
+    type: ActionTypes.LOGOUT
+  });
 
   export const loginSuccess = (authResponse, rememberMe) => ({
     type: ActionTypes.LOGIN_SUCCESS,

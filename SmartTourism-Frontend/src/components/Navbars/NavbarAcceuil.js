@@ -53,8 +53,7 @@ function NavbarAcceuil() {
         <Container>
           <div className="navbar-translate">
             <NavbarBrand
-              href="https://demos.creative-tim.com/now-ui-kit-react/#/index?ref=nukr-index-navbar"
-              target="_blank"
+              href="/acceuil"
               id="navbar-brand"
             >
               <strong> Smart Tourism</strong>
@@ -84,12 +83,9 @@ function NavbarAcceuil() {
             <Nav navbar>
               <NavItem>
                 <NavLink
-                  href="#pablo"
+                  href="/acceuil"
                   onClick={(e) => {
                     e.preventDefault();
-                    document
-                      .getElementById("download-section")
-                      .scrollIntoView();
                   }}
                 >
                   <i className="now-ui-icons arrows-1_minimal-down"></i>
@@ -101,9 +97,6 @@ function NavbarAcceuil() {
                   href="#pablo"
                   onClick={(e) => {
                     e.preventDefault();
-                    document
-                      .getElementById("download-section")
-                      .scrollIntoView();
                   }}
                 >
                   <i className="now-ui-icons arrows-1_minimal-down"></i>
@@ -126,7 +119,7 @@ function NavbarAcceuil() {
                     <i className="now-ui-icons arrows-1_minimal-right"></i>
                     Guide
                   </DropdownItem>
-                  <DropdownItem to="/index" tag={Link}>
+                  <DropdownItem to="/album" tag={Link}>
                     <i className="now-ui-icons arrows-1_minimal-right"></i>
                     Album de Souvenir
                   </DropdownItem>
@@ -147,9 +140,6 @@ function NavbarAcceuil() {
                   href="#pablo"
                   onClick={(e) => {
                     e.preventDefault();
-                    document
-                      .getElementById("download-section")
-                      .scrollIntoView();
                   }}
                 >
                   <i className="now-ui-icons arrows-1_minimal-down"></i>
@@ -159,8 +149,7 @@ function NavbarAcceuil() {
 
               <NavItem>
                 <NavLink
-                  href="https://twitter.com/CreativeTim?ref=creativetim"
-                  target="_blank"
+                  href="#pablo"
                   id="twitter-tooltip"
                 >
                   <i className="fab fa-twitter"></i>
@@ -172,8 +161,7 @@ function NavbarAcceuil() {
               </NavItem>
               <NavItem>
                 <NavLink
-                  href="https://www.facebook.com/CreativeTim?ref=creativetim"
-                  target="_blank"
+                  href="#pablo"
                   id="facebook-tooltip"
                 >
                   <i className="fab fa-facebook-square"></i>
@@ -185,8 +173,7 @@ function NavbarAcceuil() {
               </NavItem>
               <NavItem>
                 <NavLink
-                  href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
-                  target="_blank"
+                  href="#pablo"
                   id="instagram-tooltip"
                 >
                   <i className="fab fa-instagram"></i>
@@ -194,6 +181,18 @@ function NavbarAcceuil() {
                 </NavLink>
                 <UncontrolledTooltip target="#instagram-tooltip">
                   Follow us on Instagram
+                </UncontrolledTooltip>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  href="/logout"
+                  id="logout-tooltip"
+                >
+                  <i className="now-ui-icons sport_user-run"></i>
+                  <p className="d-lg-none d-xl-none">Se Déconnecter</p>
+                </NavLink>
+                <UncontrolledTooltip target="#logout-tooltip">
+                  Se Déconnecter
                 </UncontrolledTooltip>
               </NavItem>
             </Nav>

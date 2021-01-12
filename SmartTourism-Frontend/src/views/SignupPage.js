@@ -77,105 +77,105 @@ class SignupPage extends Component {
     return (
       <React.Fragment>
         <div className="page-header clear-filter" filter-color="blue">
-        <div
-          className="section section-signup"
-          style={{
-            backgroundImage: "url(" + require("assets/img/bg11.jpg") + ")",
-            backgroundSize: "cover",
-            backgroundPosition: "top center",
-            minHeight: "700px",
-          }}
-        >
-          <Container>
-            <Row>
-              <Card className="card-signup" data-background-color="blue">
-                <Form action="" className="form" method="">
-                  <CardHeader className="text-center">
-                    <CardTitle className="title-up" tag="h3">
-                      S'inscrir
-                    </CardTitle>
-                    <div className="social-line">
+          <div
+            className="section section-signup"
+            style={{
+              backgroundImage: "url(" + require("assets/img/bg11.jpg") + ")",
+              backgroundSize: "cover",
+              backgroundPosition: "top center",
+              minHeight: "700px",
+            }}
+          >
+            <Container>
+              <Row>
+                <Card className="card-signup" data-background-color="blue">
+                  <Form action="" className="form" method="">
+                    <CardHeader className="text-center">
+                      <CardTitle className="title-up" tag="h3">
+                        S'inscrir
+                      </CardTitle>
+                      <div className="social-line">
+                        <Button
+                          className="btn-neutral btn-icon btn-round"
+                          color="facebook"
+                          href="#pablo"
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          <i className="fab fa-facebook-square"></i>
+                        </Button>
+                        <Button
+                          className="btn-neutral btn-icon btn-round"
+                          color="twitter"
+                          href="#pablo"
+                          onClick={(e) => e.preventDefault()}
+                          size="lg"
+                        >
+                          <i className="fab fa-twitter"></i>
+                        </Button>
+                        <Button
+                          className="btn-neutral btn-icon btn-round"
+                          color="google"
+                          href="#pablo"
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          <i className="fab fa-google-plus"></i>
+                        </Button>
+                      </div>
+                      <div className="nav-buttons">
+                        <Button
+                          className="btn-round"
+                          color="primary"
+                          onClick={this.visitorClicked}
+                          id="visitorBtn"
+                          outline
+                        >
+                          <i className="now-ui-icons users_single-02" /> Visitor
+                        </Button>
+                        <Button
+                          className="btn-round"
+                          color="primary"
+                          onClick={this.sectorClicked}
+                          id="sectorBtn"
+                          outline
+                        >
+                          <i className="now-ui-icons business_bank" /> Sector
+                        </Button>
+                      </div>
+                    </CardHeader>
+                    <CardBody>
+                      {
+                        this.state.visitorRegistrationFormStatus ?
+                        <VisitorForm handleChange={this.handleChange} />
+                        :
+                        <SectorForm handleChange={this.handleChange} />
+                      }
+                    </CardBody>
+                    <CardFooter className="text-center">
                       <Button
-                        className="btn-neutral btn-icon btn-round"
-                        color="facebook"
-                        href="#pablo"
-                        onClick={(e) => e.preventDefault()}
-                      >
-                        <i className="fab fa-facebook-square"></i>
-                      </Button>
-                      <Button
-                        className="btn-neutral btn-icon btn-round"
-                        color="twitter"
-                        href="#pablo"
-                        onClick={(e) => e.preventDefault()}
+                        className="btn-neutral btn-round"
+                        color="info"
+                        onClick={this.formSubmit}
                         size="lg"
                       >
-                        <i className="fab fa-twitter"></i>
+                        S'inscrir
                       </Button>
-                      <Button
-                        className="btn-neutral btn-icon btn-round"
-                        color="google"
-                        href="#pablo"
-                        onClick={(e) => e.preventDefault()}
-                      >
-                        <i className="fab fa-google-plus"></i>
-                      </Button>
-                    </div>
-                    <div className="nav-buttons">
-                      <Button
-                        className="btn-round"
-                        color="primary"
-                        onClick={this.visitorClicked}
-                        id="visitorBtn"
-                        outline
-                      >
-                        <i className="now-ui-icons users_single-02" /> Visitor
-                      </Button>
-                      <Button
-                        className="btn-round"
-                        color="primary"
-                        onClick={this.sectorClicked}
-                        id="sectorBtn"
-                        outline
-                      >
-                        <i className="now-ui-icons business_bank" /> Sector
-                      </Button>
-                    </div>
-                  </CardHeader>
-                  <CardBody>
-                    {
-                      this.state.visitorRegistrationFormStatus ?
-                      <VisitorForm handleChange={this.handleChange} />
-                      :
-                      <SectorForm handleChange={this.handleChange} />
-                    }
-                  </CardBody>
-                  <CardFooter className="text-center">
-                    <Button
-                      className="btn-neutral btn-round"
-                      color="info"
-                      onClick={this.formSubmit}
-                      size="lg"
-                    >
-                      S'inscrir
-                    </Button>
-                  </CardFooter>
-                </Form>
-              </Card>
-            </Row>
-            <div className="col text-center">
-              <Button
-                className="btn-round btn-white"
-                color="default"
-                to="/login-page"
-                outline
-                size="lg"
-                tag={Link}
-              >
-                Voir la Page de Login
-              </Button>
-            </div>
-          </Container>
+                    </CardFooter>
+                  </Form>
+                </Card>
+              </Row>
+              <div className="col text-center">
+                <Button
+                  className="btn-round btn-white"
+                  color="default"
+                  to="/login-page"
+                  outline
+                  size="lg"
+                  tag={Link}
+                >
+                  Voir la Page de Login
+                </Button>
+              </div>
+            </Container>
           </div>
           <TransparentFooter />
         </div>

@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import image from "assets/img/ev.jpg";
 import {  Button,Card ,CardBody , CardText ,CardTitle ,CardImg,CardSubtitle} from 'reactstrap';
-import { baseUrl } from "shared/baseUrl";
-
 
 class EventItem extends Component {
 
@@ -11,33 +9,31 @@ class EventItem extends Component {
         super(props);
         this.state =
         {
-            interested: "s'intéresser",
-            checked: ""
-            
+            interested: this.props.isUserInterested ? "intéressé" : "s'intéresser",
+            checked: this.props.isUserInterested ? "fa fa-check ml-2" : ""
         }
         this.interested = this.interested.bind(this);
     }
 
     interested() {
         const txt = this.state.interested;
-        var url;
+        var interested;
 
         if (txt === "s'intéresser") {
             this.setState({
                 interested: "intéressé",
                 checked: "fa fa-check ml-2"
             })
-            url =':interested';
+            interested = true;
         }
         if (txt === "intéressé") {
-            this.setState({ interested: "s'intéresser", checked: "" })
-        url = ':not_interested';
+            this.setState({
+                interested: "s'intéresser",
+                checked: ""
+            })
+            interested = false;
         }
-        fetch(baseUrl + 'event/'+this.props.event.id+url,{
-            method: "PUT"})
-          .then(response => response.json())
-          .then(event => console.log(event))
-          .catch(error => console.log(error));
+        this.props.showInterest(this.props.event.id, this.props.userId, interested);
     }
 
 
@@ -52,7 +48,13 @@ class EventItem extends Component {
                         <CardText className="mb-2 text-muted">{new Intl.DateTimeFormat('fr-FR', { year: 'numeric', month: 'long', day: '2-digit', hour: '2-digit', minute: '2-digit'}).format(new Date(Date.parse(this.props.event.date)))}</CardText>
                     </CardBody>
                 </Link>
-                <Button color="info" type="button" size="sm" onClick={this.interested}  > {this.state.interested}<i className={this.state.checked}></i></Button>
+                {
+                    this.props.userRole === "Visitor" ?
+                    <Button color="info" type="button" size="sm" onClick={this.interested} >
+                        {this.state.interested}<i className={this.state.checked}></i>
+                    </Button>
+                    : <> </>
+                }
             </Card>
         );
     }

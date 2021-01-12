@@ -1,13 +1,28 @@
 import React from "react";
+import { Container ,Row, Button } from 'reactstrap';
+import { Link } from "react-router-dom";
+
 import EventItem from "components/body/evenementsETfestivaux/EventItem";
-import { Container ,Row} from 'reactstrap';
 import { Loading } from 'components/LoadingComponent';
 
 const ListEvents = (props) => {
+    const isUserInterested = (event) => {
+      if(event.guests === null)
+        return false;
+      for(let i = 0 ; i < event.guests.length ; i++)
+        if(event.guests[i].userId === props.userId)
+          return true;
+      return false;
+    }
     const list = props.events.events.map((event) => {
       return(
-        <div className="col-12 col-md-4">
-          <EventItem event={event} />
+        <div className="col-12 col-md-4" key={event.id}>
+          <EventItem
+            event={event}
+            showInterest={props.showInterest}
+            userRole={props.userRole}
+            userId={props.userId}
+            isUserInterested={isUserInterested(event)} />
         </div>
       )
     });
@@ -37,6 +52,22 @@ const ListEvents = (props) => {
             <h2 className="title">Liste des évenements ou festivaux</h2>
             <br></br>
             <Row>{list}</Row>
+            {
+              props.userRole === "Sector" ?
+              <div className="col text-center">
+                <Button
+                  className="btn-round btn-white"
+                  color="default"
+                  to="/events_festivaux/addEvent"
+                  outline
+                  size="lg"
+                  tag={Link}
+                >
+                  Créer un Evénement
+                </Button>
+              </div>
+              : <> </>
+            }
           </Container>
       );
     }

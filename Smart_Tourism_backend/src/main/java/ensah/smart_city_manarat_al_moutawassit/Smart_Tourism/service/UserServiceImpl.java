@@ -47,7 +47,8 @@ public class UserServiceImpl implements UserDetailsService, UserService {
 	 */
 	@Override
 	public User save(UserDTO userDto) {
-		
+		if(findOne(userDto.getEmail()) != null)
+			return null;
 		User user = userDto.getUserFromDTO();
 		if(user == null)
 			return null;
