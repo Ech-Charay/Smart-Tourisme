@@ -3,7 +3,9 @@
   "version": "1.4.0",
   "private": true,
   "dependencies": {
+    "@progress/kendo-react-charts": "^4.2.0",
     "axios": "^0.21.1",
+    "chart.js": "^2.9.4",
     "gulp": "4.0.2",
     "gulp-append-prepend": "1.0.8",
     "moment": "^2.26.0",
@@ -14,6 +16,8 @@
     "react-bootstrap-switch": "15.5.3",
     "react-datetime": "2.16.3",
     "react-dom": "16.13.1",
+    "react-minimal-pie-chart": "^8.1.0",
+    "react-player": "^2.7.2",
     "react-redux": "5.0.7",
     "react-redux-form": "1.16.8",
     "react-router": "5.2.0",
@@ -23,9 +27,8 @@
     "redux": "3.7.2",
     "redux-logger": "3.0.6",
     "redux-thunk": "2.2.0",
-    "yarn": "^1.22.10",
     "video-react": "^0.14.1",
-    "react-player": "^2.7.2"
+    "yarn": "^1.22.10"
   },
   "scripts": {
     "start": "react-scripts start",

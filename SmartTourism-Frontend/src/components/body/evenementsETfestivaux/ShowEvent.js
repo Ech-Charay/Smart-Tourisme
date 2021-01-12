@@ -7,6 +7,7 @@ import {
   Row,
   Col,
 } from "reactstrap";
+import Dashboard from "./dashboard/Dashboard";
 
 const ShowEvent= (props) =>{
   if (props.isLoading) {
@@ -74,6 +75,9 @@ const ShowEvent= (props) =>{
                 {props.event.description}
                 </p>
             </Col>
+          </Row>
+          <Row>
+            <Dashboard guests={props.event.guests}/>
           </Row>
         </div>
       </Container>
