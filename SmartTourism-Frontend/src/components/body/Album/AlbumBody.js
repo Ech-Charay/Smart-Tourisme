@@ -15,6 +15,8 @@ class AlbumBody extends Component {
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.downloadSampleFileByName = this.downloadSampleFileByName.bind(this);
+
     }
 
 
@@ -47,12 +49,35 @@ class AlbumBody extends Component {
             console.log(error);
         })
 
-       
-
-
-
-    }
-
+      }
+       downloadSampleFileByName = (event) => {
+        event.preventDefault();
+        let url = 'http://localhost:8080/album/file/video.mp4'
+            ;
+        let headers = {
+          method: 'GET',
+          headers: { 'Content-Type': 'video/mp4' }
+        }
+        let filename = '';
+        fetch(url, headers)
+          .then(response => {
+           
+              return response.blob();
+            } ,(err) =>{
+              throw Error(err.statusText);
+            }
+          )
+          .then(blob => {
+            let url = window.URL.createObjectURL(blob);
+            let a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+            window.URL.revokeObjectURL(url);
+          })
+          .catch(error => {
+          });
+      }
     
 
     render() {
@@ -64,7 +89,9 @@ class AlbumBody extends Component {
                             <h3 className="title">Turn your photos into videos with the easiest online video tool</h3>
                             <h5 className="description">
                                 Simply add your photos into our online video creation software and quickly rearrange your pictures to tell your story.
-                                Drag and drop your way to a stunning video in minutes. No video editing experience necessary!
+                                Drag and drop your way to a stunning video in minutes. No video editing experience necessary!<br/>
+                                            <span style={{color:"red"}}>( only .png format )</span>
+
                             </h5>
 
                             <form onSubmit={this.handleSubmit} method="post" encType="multipart/form-data">
@@ -73,6 +100,8 @@ class AlbumBody extends Component {
                                 <span style={{ color: "#00bcff" , visibility: this.state.showHideDemo1 ? "visible":"hidden" }}><i className="fas fa-sync fa-spin ml-1" ></i></span>
 
                             </form>
+                            <button className="btn btn-info"  onClick={this.downloadSampleFileByName}> Start download </button>
+
                         </Col>
                         <Col lg="6" md="12">
                             <ReactPlayer

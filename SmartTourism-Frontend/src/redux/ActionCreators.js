@@ -42,7 +42,8 @@ export const postEvent = (name, date, localisation, description, isPrivate) => (
       })
     .then(response => response.json())
     .then(event =>  { dispatch(addEvent(event)); 
-      alert("votre évenement est crée")})
+      window.location.href="/events_festivaux/"+event.id;
+    })
     .catch(error =>  { console.log('post events', error.message); alert('Your event could not be posted\nError: '+error.message); });
   };
 
