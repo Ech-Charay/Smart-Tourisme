@@ -6,6 +6,8 @@ import LoginPage from "views/LoginPage.js";
 import SignupPage from "views/SignupPage.js";
 import Acceuil from "views/Acceuil.js";
 import EventsFestivaux from "views/Event_Festivaux";
+import Albums from "views/Albums";
+
 import { connect } from 'react-redux';
 
 import { login, signup  } from './redux/ActionCreators';
@@ -64,6 +66,9 @@ class App extends Component {
             <EventsFestivaux />
             : <Redirect to="/login-page" />
           }
+        </Route>
+        <Route path="/album">
+          <Albums />
         </Route>
 
         <Redirect to="/acceuil" />
