@@ -1,36 +1,40 @@
 import React from "react";
 import Chart from "chart.js";
 
-export default function CardNombreVisiteur() {
+function CompterNombre(guests) {
+  var data =[0,0,0,0,0];
+  if(guests != null){
+      guests.forEach(element => {
+        var residence = element.residence;
+          if(residence.indexOf('Maroc') !== -1) data[0]++;
+          if(residence.indexOf('USA') !== -1) data[1]++;
+          if(residence.indexOf('France') !== -1) data[2]++;
+          if(residence.indexOf('Espagne') !== -1) data[3]++;
+          })
+    }
+    return data;
+}
+
+export default function CardNombreVisiteur(props) {
+  var dataDest = CompterNombre(props.guests)
   React.useEffect(() => {
     let config = {
       type: "bar",
       data: {
         labels: [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
+          "Maroc",
+          "USA",
+          "France",
+          "Espagne"
         ],
         datasets: [
           {
-            label: new Date().getFullYear(),
-            backgroundColor: "#ed64a6",
-            borderColor: "#ed64a6",
-            data: [30, 78, 56, 34, 100, 45, 13],
+            label:"Langues",
+            backgroundColor: "#A90AB0",
+            borderColor: "#A90AB0",
+            data: dataDest,
             fill: false,
-            barThickness: 8,
-          },
-          {
-            label: new Date().getFullYear() - 1,
-            fill: false,
-            backgroundColor: "#4c51bf",
-            borderColor: "#4c51bf",
-            data: [27, 68, 86, 74, 10, 4, 87],
-            barThickness: 8,
+            barThickness: 30,
           },
         ],
       },
@@ -39,7 +43,7 @@ export default function CardNombreVisiteur() {
         responsive: true,
         title: {
           display: false,
-          text: "Orders Chart",
+          text: "Pays Chart",
         },
         tooltips: {
           mode: "index",
@@ -62,7 +66,7 @@ export default function CardNombreVisiteur() {
               display: false,
               scaleLabel: {
                 display: true,
-                labelString: "Month",
+                labelString: "Nombre Visiteurs",
               },
               gridLines: {
                 borderDash: [2],
@@ -105,7 +109,7 @@ export default function CardNombreVisiteur() {
           <div className="flex flex-wrap items-center">
             <div className="relative w-full max-w-full flex-grow flex-1">
               <h6 className="uppercase text-gray-500 mb-1 text-xs font-semibold">
-                La destribution 
+                La destribution
               </h6>
               <h2 className="text-gray-800 text-xl font-semibold">
                 Des Pays

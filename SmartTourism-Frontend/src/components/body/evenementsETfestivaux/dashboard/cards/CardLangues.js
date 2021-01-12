@@ -2,7 +2,7 @@ import React from "react";
 import Chart from "chart.js";
 
 function CompterLangues(guests) {
-  var data =[0,0,0,0];
+  var data =[0,0,0,0,0];
   if(guests != null){
       guests.forEach(element => {
         var langues = element.spokenLanguages;
