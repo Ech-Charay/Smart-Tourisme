@@ -8,6 +8,8 @@ import Logout from "views/Logout.js";
 import Acceuil from "views/Acceuil.js";
 import EventsFestivaux from "views/Event_Festivaux";
 import Albums from "views/Albums";
+import NavbarAcceuil from "components/Navbars/NavbarAcceuil";
+import DefaultFooter from "components/Footers/DefaultFooter";
 
 import { connect } from 'react-redux';
 
@@ -77,32 +79,35 @@ class App extends Component {
             : <Redirect to="/" />
           }
         </Route>
-        <Route path="/acceuil">
+        <Route path="/">
           {
             this.authenticated()?
-            <Acceuil />
+            <React.Fragment>
+              <NavbarAcceuil/>
+              <Switch>
+                <Route path="/acceuil">
+                    <Acceuil />
+                </Route>
+                <Route path="/events_festivaux">
+                    <EventsFestivaux
+                      events={this.props.events}
+                      postEvent={this.props.postEvent}
+                      fetchEvents={this.props.fetchEvents}
+                      showInterest={this.props.showInterest}
+                      userRole={role}
+                      userId={userId} />
+                </Route>
+                <Route path="/album">
+                  <Albums />
+                </Route>
+                <Redirect to="/acceuil" />
+                <Redirect from="/" to="/acceuil" />
+              </Switch>
+              <DefaultFooter />
+            </React.Fragment>
             : <Redirect to="/login-page" />
           }
         </Route>
-        <Route path="/events_festivaux">
-          {
-            this.authenticated()?
-            <EventsFestivaux
-              events={this.props.events}
-              postEvent={this.props.postEvent}
-              fetchEvents={this.props.fetchEvents}
-              showInterest={this.props.showInterest}
-              userRole={role}
-              userId={userId} />
-            : <Redirect to="/login-page" />
-          }
-        </Route>
-        <Route path="/album">
-          <Albums />
-        </Route>
-
-        <Redirect to="/acceuil" />
-        <Redirect from="/" to="/acceuil" />
       </Switch>
     );
   }

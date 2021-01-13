@@ -1,12 +1,8 @@
 import React from "react";
 
 // core components
-import DefaultFooter from "components/Footers/DefaultFooter.js";
 import AlbumHeader from "components/Headers/AlbumHeader";
 import AlbumBody from "components/body/Album/AlbumBody";
-import NavbarAcceuil from "components/Navbars/NavbarAcceuil";
-
-
 
 function Albums(props) {
   React.useEffect(() => {
@@ -23,13 +19,11 @@ function Albums(props) {
 
   return (
     <>
-      <NavbarAcceuil/>
       <div className="wrapper">
         <AlbumHeader title="Get your Album" />
         <div className="section section-contact-us text-center">
           <AlbumBody />
         </div>
-        <DefaultFooter />
       </div>
     </>
   );

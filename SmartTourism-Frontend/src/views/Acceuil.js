@@ -1,8 +1,6 @@
 import React from "react";
 import BodyAcceuil from "components/body/bodyAcceuil";
-import DefaultFooter from "components/Footers/DefaultFooter";
 import Header from "components/Headers/Header";
-import NavbarAcceuil from "components/Navbars/NavbarAcceuil";
 
 function Acceuil() {
   React.useEffect(() => {
@@ -18,14 +16,12 @@ function Acceuil() {
   });
   return (
     <>
-      <NavbarAcceuil/>
       <div className="wrapper">
         <Header />
         <div className="main">
           <BodyAcceuil/>
         </div>
       </div>
-      <DefaultFooter />
     </>
   );
 }

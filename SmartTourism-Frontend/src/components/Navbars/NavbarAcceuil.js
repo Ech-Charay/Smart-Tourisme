@@ -51,29 +51,27 @@ function NavbarAcceuil() {
       ) : null}
       <Navbar className={"fixed-top " + navbarColor} expand="lg" color="info">
         <Container>
-          <div className="navbar-translate">
-            <NavbarBrand
-              href="/acceuil"
-              id="navbar-brand"
+          <UncontrolledDropdown className="button-dropdown">
+            <DropdownToggle
+              caret
+              data-toggle="dropdown"
+              href="#pablo"
+              id="navbarDropdown"
+              tag="a"
+              onClick={(e) => e.preventDefault()}
             >
-              <strong> Smart Tourism</strong>
+              <span className="button-bar"></span>
+              <span className="button-bar"></span>
+              <span className="button-bar"></span>
+            </DropdownToggle>
+          </UncontrolledDropdown>
+          <div className="navbar-translate">
+            <NavbarBrand id="navbar-brand" href="#brand">
+              Smart Tourism
             </NavbarBrand>
             <UncontrolledTooltip target="#navbar-brand">
-              Designed by ST-TEAM
+              Welcome to our Smart Tourism Service
             </UncontrolledTooltip>
-            <button
-              className="navbar-toggler navbar-toggler"
-              onClick={() => {
-                document.documentElement.classList.toggle("nav-open");
-                setCollapseOpen(!collapseOpen);
-              }}
-              aria-expanded={collapseOpen}
-              type="button"
-            >
-              <span className="navbar-toggler-bar top-bar"></span>
-              <span className="navbar-toggler-bar middle-bar"></span>
-              <span className="navbar-toggler-bar bottom-bar"></span>
-            </button>
           </div>
           <Collapse
             className="justify-content-end"
@@ -82,32 +80,15 @@ function NavbarAcceuil() {
           >
             <Nav navbar>
               <NavItem>
-                <NavLink
-                  href="/acceuil"
-                  onClick={(e) => {
-                    e.preventDefault();
-                  }}
-                >
+                <NavLink href="/acceuil">
                   <i className="now-ui-icons arrows-1_minimal-down"></i>
                   <p>Home</p>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  href="#pablo"
-                  onClick={(e) => {
-                    e.preventDefault();
-                  }}
-                >
-                  <i className="now-ui-icons arrows-1_minimal-down"></i>
-                  <p>About</p>
                 </NavLink>
               </NavItem>
               <UncontrolledDropdown nav>
                 <DropdownToggle
                   caret
                   color="default"
-                  href="#pablo"
                   nav
                   onClick={(e) => e.preventDefault()}
                 >
@@ -136,12 +117,7 @@ function NavbarAcceuil() {
               </UncontrolledDropdown>
               
               <NavItem>
-                <NavLink
-                  href="#pablo"
-                  onClick={(e) => {
-                    e.preventDefault();
-                  }}
-                >
+                <NavLink href="#contact">
                   <i className="now-ui-icons arrows-1_minimal-down"></i>
                   <p>Contact</p>
                 </NavLink>

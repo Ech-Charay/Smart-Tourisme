@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 
-import DefaultFooter from "components/Footers/DefaultFooter.js";
 import ServicesHeader from "components/Headers/ServicesHeader";
 import ShowEvent from "components/body/evenementsETfestivaux/ShowEvent";
 import AddEvent from "components/body/evenementsETfestivaux/AddEvent";
-import NavbarAcceuil from "components/Navbars/NavbarAcceuil";
 import ListEvents from "views/ListEvents";
 
 class EventsFestivaux extends Component {
@@ -35,7 +33,6 @@ class EventsFestivaux extends Component {
     };
     return (
       <>
-        <NavbarAcceuil />
         <div className="wrapper">
           <ServicesHeader title="Evénements et Festivaux." />
           <div className="section section-contact-us text-center">
@@ -58,7 +55,6 @@ class EventsFestivaux extends Component {
               <Redirect from="/events_festivaux/" to="/events_festivaux/list" /> 
             </Switch>
           </div>
-          <DefaultFooter />
         </div>
       </>
     );

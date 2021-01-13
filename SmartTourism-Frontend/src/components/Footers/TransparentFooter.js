@@ -9,34 +9,6 @@ function TransparentFooter() {
     <footer className="footer">
       <Container>
         <nav>
-          <ul>
-            <li>
-              <a
-                href="https://www.creative-tim.com?ref=nukr-transparent-footer"
-                target="_blank"
-              >
-                Creative Tim
-              </a>
-            </li>
-            <li>
-              <a
-                href="http://presentation.creative-tim.com?ref=nukr-transparent-footer"
-                target="_blank"
-              >
-                About Us
-              </a>
-            </li>
-            <li>
-              <a
-                href="http://blog.creative-tim.com?ref=nukr-transparent-footer"
-                target="_blank"
-              >
-                Blog
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <div className="copyright" id="copyright">
           © {new Date().getFullYear()}, Designed by{" "}
           <a
             href="https://www.invisionapp.com?ref=nukr-transparent-footer"
@@ -44,12 +16,36 @@ function TransparentFooter() {
           >
             Invision
           </a>
-          . Coded by{" "}
+          ,{" "}
           <a
             href="https://www.creative-tim.com?ref=nukr-transparent-footer"
             target="_blank"
           >
             Creative Tim
+          </a>
+          . 
+        </nav>
+        <div className="copyright" id="copyright">
+          Coded by{" "}
+          <a
+            href="https://www.linkedin.com/in/mohamed-ech-charay-765421170/"
+            target="_blank"
+          >
+            Ech-charay Mohamed
+          </a>
+          |{" "}
+          <a
+            href="https://www.linkedin.com/in/basma-maachi-b9533413b/"
+            target="_blank"
+          >
+            Maachi Bassma
+          </a>
+          |{" "}
+          <a
+            href="https://www.linkedin.com/in/walideljaimi/"
+            target="_blank"
+          >
+            El Jaimi Walid
           </a>
           .
         </div>
