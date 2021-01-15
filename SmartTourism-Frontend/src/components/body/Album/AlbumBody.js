@@ -56,7 +56,7 @@ class AlbumBody extends Component {
             ;
         let headers = {
           method: 'GET',
-          headers: { 'Content-Type': 'video/mp4' }
+          headers: {  }
         }
         let filename = '';
         fetch(url, headers)
