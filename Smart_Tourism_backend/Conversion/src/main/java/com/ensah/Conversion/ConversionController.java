@@ -67,7 +67,7 @@ public class ConversionController {
         ArrayList<String> procssArgs = new ArrayList<>();
         procssArgs.add("src\\main\\resources\\static\\ffmpeg-4.3.1-2020-11-19-full_build\\bin\\ffmpeg");
         procssArgs.add("-framerate");
-        procssArgs.add("1/2");
+        procssArgs.add("1/3");
         procssArgs.add("-i");
         procssArgs.add(System.getProperty("user.dir") + "\\src\\main\\resources\\static\\images\\uploads\\img%02d.png");
         procssArgs.add("-vf");
