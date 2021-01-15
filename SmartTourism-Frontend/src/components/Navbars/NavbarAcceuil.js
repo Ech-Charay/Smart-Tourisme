@@ -96,7 +96,7 @@ function NavbarAcceuil() {
                   <p>Services</p>
                 </DropdownToggle>
                 <DropdownMenu>
-                  <DropdownItem to="/index" tag={Link}>
+                  <DropdownItem to="/guide" tag={Link}>
                     <i className="now-ui-icons arrows-1_minimal-right"></i>
                     Guide
                   </DropdownItem>

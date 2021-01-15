@@ -8,6 +8,7 @@ import Logout from "views/Logout.js";
 import Acceuil from "views/Acceuil.js";
 import EventsFestivaux from "views/Event_Festivaux";
 import Albums from "views/Albums";
+import Guide from "views/Guide";
 import NavbarAcceuil from "components/Navbars/NavbarAcceuil";
 import DefaultFooter from "components/Footers/DefaultFooter";
 
@@ -96,6 +97,9 @@ class App extends Component {
                       showInterest={this.props.showInterest}
                       userRole={role}
                       userId={userId} />
+                </Route>
+                <Route path="/guide">
+                    <Guide userId={userId} />
                 </Route>
                 <Route path="/album">
                   <Albums />

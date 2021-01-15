@@ -10,6 +10,8 @@ import "assets/css/bootstrap.min.css";
 import "assets/scss/now-ui-kit.scss?v=1.4.0";
 import "assets/demo/demo.css?v=1.4.0";
 import "assets/demo/nucleo-icons-page-styles.css?v=1.4.0";
+import 'leaflet/dist/leaflet.css';
+import "assets/css/leaflet_container.css";
 
 import App from "./App.js";
 
