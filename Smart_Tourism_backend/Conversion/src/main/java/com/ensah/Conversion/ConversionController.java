@@ -69,7 +69,7 @@ public class ConversionController {
         procssArgs.add("-framerate");
         procssArgs.add("1/3");
         procssArgs.add("-i");
-        procssArgs.add(System.getProperty("user.dir") + "\\src\\main\\resources\\static\\images\\uploads\\img%02d.png");
+        procssArgs.add(System.getProperty("user.dir") + "\\src\\main\\resources\\static\\images\\img%02d.png");
         procssArgs.add("-vf");
         procssArgs.add("scale=1920x1080");
         procssArgs.add("-c:v");
