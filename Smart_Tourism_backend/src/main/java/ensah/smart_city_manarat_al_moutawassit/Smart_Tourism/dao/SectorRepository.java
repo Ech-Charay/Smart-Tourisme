@@ -2,7 +2,7 @@ package ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.dao;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity.Sector;
+import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity.users.Sector;
 
 /**
  * Spring Data MongoDB based Sector Repository

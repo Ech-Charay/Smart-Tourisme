@@ -1,6 +1,6 @@
 package ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.dto;
 
-import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity.User;
+import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity.users.User;
 
 /**
  * AuthToken is a wrapper class for token

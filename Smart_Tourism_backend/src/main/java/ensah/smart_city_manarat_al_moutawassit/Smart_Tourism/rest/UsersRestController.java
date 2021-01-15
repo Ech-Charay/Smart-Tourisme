@@ -18,7 +18,7 @@ import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.config.TokenProvide
 import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.dto.AuthResponse;
 import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.dto.LoginUser;
 import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.dto.UserDTO;
-import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity.User;
+import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity.users.User;
 import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.service.UserService;
 
 /**

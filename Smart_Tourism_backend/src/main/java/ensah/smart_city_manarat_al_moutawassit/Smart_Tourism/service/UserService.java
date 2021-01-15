@@ -3,8 +3,8 @@ package ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.service;
 import java.util.List;
 
 import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.dto.UserDTO;
-import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity.User;
-import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity.Visitor;
+import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity.users.User;
+import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity.users.Visitor;
 
 /**
  * User Service Interface

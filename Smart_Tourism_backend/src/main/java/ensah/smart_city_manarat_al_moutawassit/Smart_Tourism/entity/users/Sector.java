@@ -1,4 +1,4 @@
-package ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity;
+package ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity.users;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 

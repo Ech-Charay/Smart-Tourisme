@@ -2,9 +2,9 @@ package ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.dto;
 
 import java.util.Arrays;
 
-import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity.Sector;
-import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity.User;
-import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity.Visitor;
+import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity.users.Sector;
+import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity.users.User;
+import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity.users.Visitor;
 
 /**
  * UserDTO a Data Transfer Object for User entity, used to bind registration data. I’ve added a new method getUserFromDto to convert it to a User object.

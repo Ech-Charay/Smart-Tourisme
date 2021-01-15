@@ -17,9 +17,9 @@ import org.springframework.stereotype.Service;
 import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.dao.SectorRepository;
 import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.dao.VisitorRepository;
 import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.dto.UserDTO;
-import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity.Sector;
-import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity.User;
-import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity.Visitor;
+import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity.users.Sector;
+import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity.users.User;
+import ensah.smart_city_manarat_al_moutawassit.Smart_Tourism.entity.users.Visitor;
 
 /**
  * User Service Implementation
@@ -43,7 +43,7 @@ public class UserServiceImpl implements UserDetailsService, UserService {
 	 * Create/update a user. If the id is not specified it creates that user in the database.
 	 * Otherwise, it searches and updates the user with that id in the database, and if no element is found it creates a new one.
 	 * @param userDto : the user to create or the modified user to save
-	 * @return the updated/created event
+	 * @return the updated/created user
 	 */
 	@Override
 	public User save(UserDTO userDto) {
