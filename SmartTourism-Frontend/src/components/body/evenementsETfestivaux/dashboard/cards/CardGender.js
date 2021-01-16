@@ -32,15 +32,23 @@ export default function CardGender(props) {
       type: "pie",
       data: {
         datasets: [{
-          data: [femme, homme]
-      }],
+          data: [femme, homme],
+          backgroundColor: ["#FF00E7", "#0000FF"]
+        }],
   
       // These labels appear in the legend and in the tooltips when hovering different arcs
-      labels: [
-          'Femme',
-          'Homme'
-      ]
+        labels: [
+            'Femme',
+            'Homme'
+        ]
       },
+      options: {
+        responsive: true,
+        title:{
+            display: true,
+            text: "La destribution du sexe"
+        }
+      }
     };
     let ctx = document.getElementById("gender-chart").getContext("2d");
     window.myBar = new Chart(ctx, config);

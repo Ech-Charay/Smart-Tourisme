@@ -5,7 +5,7 @@ import { Container } from "reactstrap";
 
 // core components
 
-function AlbumHeader(props) {
+function GuideHeader(props) {
   let pageHeader = React.createRef();
 
   React.useEffect(() => {
@@ -28,7 +28,7 @@ function AlbumHeader(props) {
         <div
           className="page-header-image"
           style={{
-            backgroundImage: "url(" + require("assets/img/BackgroundAlbum.jpg") + ")",
+            backgroundImage: "url(https://ml89nixsxwwy.i.optimole.com/w:1080/h:675/q:auto/rt:fill/g:ce/https://www.eshop-promotion.com/wp-content/uploads/2019/02/e-commerce.jpg)",
           }}
           ref={pageHeader}
         ></div>
@@ -42,4 +42,4 @@ function AlbumHeader(props) {
   );
 }
 
-export default AlbumHeader;
+export default GuideHeader;

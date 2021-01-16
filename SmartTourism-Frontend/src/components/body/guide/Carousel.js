@@ -35,12 +35,12 @@ function CustomCarousel(props){
           activeIndex={activeIndex}
           onClickHandler={goToIndex}
         />
-        {items.map(item => {
+        {items.map((item, index) => {
           return (
             <CarouselItem
               onExiting={onExiting}
               onExited={onExited}
-              key={item.src}
+              key={index}
             >
               <img src={item.src} width="400" height="400" alt={item.altText} />
               <div className="carousel-caption d-none d-md-block">

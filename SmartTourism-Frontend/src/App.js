@@ -14,13 +14,16 @@ import DefaultFooter from "components/Footers/DefaultFooter";
 
 import { connect } from 'react-redux';
 
-import { login, signup, logout, postEvent, fetchEvents, showInterest } from './redux/ActionCreators';
+import { login, signup, logout, postEvent, fetchEvents, showInterest, fetchHotels, fetchBeaches, fetchParks } from './redux/ActionCreators';
 
 
 const mapStateToProps = state => {
   return {
     userDetails: state.userDetails,
-    events: state.events
+    events: state.events,
+    hotels: state.hotels,
+    beaches: state.beaches,
+    parks: state.parks
   }
 }
 
@@ -30,7 +33,10 @@ const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
   postEvent: (name, date, localisation, description, isPrivate) => dispatch(postEvent(name, date, localisation, description, isPrivate)),
   fetchEvents: () => dispatch(fetchEvents()),
-  showInterest: (eventId, interested) => dispatch(showInterest(eventId, interested))
+  showInterest: (eventId, interested) => dispatch(showInterest(eventId, interested)),
+  fetchHotels: () => dispatch(fetchHotels()),
+  fetchBeaches: () => dispatch(fetchBeaches()),
+  fetchParks: () => dispatch(fetchParks())
 });
 
 class App extends Component {
@@ -99,7 +105,14 @@ class App extends Component {
                       userId={userId} />
                 </Route>
                 <Route path="/guide">
-                    <Guide userId={userId} />
+                    <Guide
+                      userId={userId}
+                      hotels={this.props.hotels}
+                      fetchHotels={this.props.fetchHotels}
+                      beaches={this.props.beaches}
+                      fetchBeaches={this.props.fetchBeaches}
+                      parks={this.props.parks}
+                      fetchParks={this.props.fetchParks} />
                 </Route>
                 <Route path="/album">
                   <Albums />

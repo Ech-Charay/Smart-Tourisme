@@ -127,6 +127,7 @@ export const showInterest = (eventId, userId, interested) => (dispatch) => {
     .catch(error =>  { console.log('put event', error.message); alert('Error: '+error.message); });
 }
 
+/**************************************************************/
 export const signup = (type, username, password, name, description, activityField, birthday, city, country, languages, gender) => (dispatch) => {
 
     var user = {type: type, email: username, password: password, name: name};
@@ -225,3 +226,144 @@ export const signup = (type, username, password, name, description, activityFiel
     type: ActionTypes.LOGIN_FAILED,
     payload: errMess
   });
+
+/**************************************************************/
+export const hotelsLoading = () => ({
+    type: ActionTypes.HOTELS_LOADING
+});
+
+export const hotelsFailed = (errmess) => ({
+    type: ActionTypes.HOTELS_FAILED,
+    payload: errmess
+});
+
+export const addHotels = (hotels) => ({
+    type: ActionTypes.ADD_HOTELS,
+    payload: hotels
+});
+
+export const fetchHotels = () => (dispatch) => {
+
+    dispatch(hotelsLoading());
+
+    let token = window.localStorage.getItem("authToken")? window.localStorage.getItem("authToken"): "";
+
+    return fetch(baseUrl + 'places/hotels', {
+        method: "GET",
+        headers: {
+          "Authorization": "Bearer " + token,
+          "Content-Type": "application/json"
+        },
+        credentials: "same-origin"
+    })
+    .then(response => {
+        if (response.ok) {
+          return response;
+        } else {
+          var error = new Error('Error ' + response.status + ': ' + response.statusText);
+          error.response = response;
+          throw error;
+        }
+      },
+      error => {
+            var errmess = new Error(error.message);
+            throw errmess;
+      })
+    .then(response => response.json())
+    .then(hotels => dispatch(addHotels(hotels)))
+    .catch(error => dispatch(hotelsFailed(error.message)));
+}
+
+/**************************************************************/
+export const beachesLoading = () => ({
+    type: ActionTypes.BEACHES_LOADING
+});
+
+export const beachesFailed = (errmess) => ({
+    type: ActionTypes.BEACHES_FAILED,
+    payload: errmess
+});
+
+export const addBeaches = (beaches) => ({
+    type: ActionTypes.ADD_BEACHES,
+    payload: beaches
+});
+
+export const fetchBeaches = () => (dispatch) => {
+
+    dispatch(beachesLoading());
+
+    let token = window.localStorage.getItem("authToken")? window.localStorage.getItem("authToken"): "";
+
+    return fetch(baseUrl + 'places/beaches', {
+        method: "GET",
+        headers: {
+          "Authorization": "Bearer " + token,
+          "Content-Type": "application/json"
+        },
+        credentials: "same-origin"
+    })
+    .then(response => {
+        if (response.ok) {
+          return response;
+        } else {
+          var error = new Error('Error ' + response.status + ': ' + response.statusText);
+          error.response = response;
+          throw error;
+        }
+      },
+      error => {
+            var errmess = new Error(error.message);
+            throw errmess;
+      })
+    .then(response => response.json())
+    .then(beaches => dispatch(addBeaches(beaches)))
+    .catch(error => dispatch(beachesFailed(error.message)));
+}
+
+/**************************************************************/
+export const parksLoading = () => ({
+    type: ActionTypes.PARKS_LOADING
+});
+
+export const parksFailed = (errmess) => ({
+    type: ActionTypes.PARKS_FAILED,
+    payload: errmess
+});
+
+export const addParks = (parks) => ({
+    type: ActionTypes.ADD_PARKS,
+    payload: parks
+});
+
+export const fetchParks = () => (dispatch) => {
+
+    dispatch(parksLoading());
+
+    let token = window.localStorage.getItem("authToken")? window.localStorage.getItem("authToken"): "";
+
+    return fetch(baseUrl + 'places/parks', {
+        method: "GET",
+        headers: {
+          "Authorization": "Bearer " + token,
+          "Content-Type": "application/json"
+        },
+        credentials: "same-origin"
+    })
+    .then(response => {
+        if (response.ok) {
+          return response;
+        } else {
+          var error = new Error('Error ' + response.status + ': ' + response.statusText);
+          error.response = response;
+          throw error;
+        }
+      },
+      error => {
+            var errmess = new Error(error.message);
+            throw errmess;
+      })
+    .then(response => response.json())
+    .then(parks => dispatch(addParks(parks)))
+    .catch(error => dispatch(parksFailed(error.message)));
+}
