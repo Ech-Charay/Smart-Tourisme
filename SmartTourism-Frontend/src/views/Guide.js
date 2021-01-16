@@ -200,7 +200,7 @@ class Guide extends Component {
 				          <CardTitle tag="h4">List des {this.state.selectedCategory} d'Al Hoceïma</CardTitle>
 
 				          <Container id="map_container">
-					          <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+					          <MapContainer center={[35.23673457111137, -3.937290290980464]} zoom={13} scrollWheelZoom={false}>
 										  <TileLayer
 										    attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 										    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
